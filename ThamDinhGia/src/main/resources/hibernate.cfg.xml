@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/thamdinhgia_db?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">abcd1234</property>
+    <property name="hibernate.jdbc.batch_size">20</property>
+    <mapping class="dev.rapid.domain.HopDong"/>
+    <mapping class="dev.rapid.domain.TaiSan"/>
+    <mapping class="dev.rapid.domain.BatDongSan"/>
+    <mapping class="dev.rapid.domain.LoaiTaiSan"/>
+    <mapping class="dev.rapid.domain.MayMocThietBi"/>
+    <mapping class="dev.rapid.domain.GiaTriDoanhNghiep"/>
+    <mapping class="dev.rapid.domain.NhanSu"/>
+    <mapping class="dev.rapid.domain.ChiTietHopDong"/>
+    <mapping class="dev.rapid.domain.KhachHang"/>
+    <mapping class="dev.rapid.domain.ChiTietHopDongId"/>
+    <mapping class="dev.rapid.domain.PhuongPhap"/>
+  </session-factory>
+</hibernate-configuration>

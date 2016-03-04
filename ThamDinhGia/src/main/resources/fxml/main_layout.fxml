@@ -64,6 +64,7 @@
                                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                           <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                           <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                        </children>
                                     </AnchorPane>
                               </content>
@@ -75,6 +76,7 @@
                                           <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                           <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                           <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                        </children>
                                     </AnchorPane>
                               </content>

@@ -8,9 +8,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.ChiTietHopDongController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" prefHeight="38.0" prefWidth="580.0" text="Chi tiết hợp đồng" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" prefHeight="38.0" prefWidth="580.0" text="Chi tiết hợp đồng" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -62,8 +62,8 @@
          </children>
       </GridPane>
       <Label layoutY="171.0" text="Thông tin khách hàng" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="20.0" />
-      <Button layoutX="10.0" layoutY="192.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="50.0" />
-      <Button layoutX="89.0" layoutY="192.0" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="130.0" />
+      <Button layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#taoMoiKhachHang" text="Tạo mới" AnchorPane.leftAnchor="50.0" />
+      <Button layoutX="89.0" layoutY="192.0" mnemonicParsing="false" onAction="#timKiemKhachHang" text="Tìm kiếm" AnchorPane.leftAnchor="130.0" />
       <Line endX="600.0" layoutX="150.0" layoutY="170.0" startX="-100.0" />
       <GridPane layoutX="14.0" layoutY="225.0" prefHeight="170.0" prefWidth="439.0" AnchorPane.leftAnchor="50.0">
         <columnConstraints>
@@ -92,7 +92,7 @@
             <Label text="Fax" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Đại diện" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label text="Mã số thuế" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="Cập nhật" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button mnemonicParsing="false" onAction="#suaKhachHang" prefHeight="25.0" prefWidth="80.0" text="Sửa" GridPane.columnIndex="1" GridPane.rowIndex="6" />
          </children>
       </GridPane>
       <Line endX="600.0" layoutX="150.0" layoutY="400.0" startX="-100.0" />
@@ -106,6 +106,6 @@
             <TableColumn prefWidth="64.0" />
         </columns>
       </TableView>
-      <Button layoutX="378.0" layoutY="574.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Cập nhật" AnchorPane.bottomAnchor="6.0" />
+      <Button fx:id="updateBtn" layoutX="378.0" layoutY="574.0" mnemonicParsing="false" onAction="#updateHopDong" prefHeight="25.0" prefWidth="84.0" text="Cập nhật" AnchorPane.bottomAnchor="6.0" />
    </children>
 </AnchorPane>

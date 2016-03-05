@@ -2,10 +2,7 @@ package mockup.controller;
 
 import java.io.IOException;
 
-import dev.rapid.util.Constants;
-import dev.rapid.util.MessageHelper;
 import javafx.application.Application;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
@@ -14,7 +11,7 @@ import javafx.stage.Stage;
 
 public class Mockup extends Application {
 
-	private Stage primaryStage;
+	public Stage primaryStage;
 	public BorderPane mainLayout;
 
 	private static AnchorPane loginBox;

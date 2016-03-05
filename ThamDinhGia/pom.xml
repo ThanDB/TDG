@@ -10,7 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<mainClass>com.dev.thamdinhgia.MainApp</mainClass>
+		<mainClass>mockup.controller.Mockup</mainClass>
 		<logback.version>1.1.3</logback.version>
 		<jcl.slf4j.version>1.7.12</jcl.slf4j.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
@@ -86,4 +86,24 @@
 			<version>SNAPSHOT</version>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- Build an executable JAR -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<!-- <version>[2.4,)</version> -->
+				<configuration>
+					<archive>
+						<manifest>
+							<addClasspath>true</addClasspath>
+							<classpathPrefix>lib/</classpathPrefix>
+							<mainClass>mockup.controller.Mockup</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -4,8 +4,9 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
-public class HopDongListController extends AbstractController {
+public class KhachHangListController {
 	@FXML
 	private Label error_msg;
 
@@ -16,12 +17,6 @@ public class HopDongListController extends AbstractController {
 	private PasswordField mat_khau;
 
 	private Mockup app;
-
-	@FXML
-	private void timKiem() {}
-
-	@FXML
-	private void xoaThongTin() {}
 
 	@FXML
 	private void login() {
@@ -41,6 +36,10 @@ public class HopDongListController extends AbstractController {
 
 	public void setApp(Mockup obj) {
 		this.app = obj;
+	}
+
+	public void setDialogStage(Stage dialogStage) {
+
 	}
 
 }

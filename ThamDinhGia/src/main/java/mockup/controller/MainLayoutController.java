@@ -48,7 +48,7 @@ public class MainLayoutController extends AbstractController{
 	private void timKiemHopDong() {
 		try {
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/hop_dong_list.fxml"));
+			loaderContent.setLocation(MainLayoutController.class.getResource("/fxml/hop_dong_list.fxml"));
 
 			contentArea = (AnchorPane) loaderContent.load();
 
@@ -61,14 +61,20 @@ public class MainLayoutController extends AbstractController{
 	@FXML
 	private void taoMoiHopDong() {
 		try {
-			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/chi_tiet_hop_dong.fxml"));
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_hop_dong.fxml"));
 
-			contentArea = (AnchorPane) loaderContent.load();
+			contentArea = (AnchorPane) loader.load();
+
+			ChiTietHopDongController controller = loader.getController();
+			controller.setTitle("Tạo mới hợp đồng");
+			controller.setUpdateButtonTitle("Tạo mới");
+			controller.setApp(app);
 
 			app.mainLayout.setRight(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 		}
 	}
 

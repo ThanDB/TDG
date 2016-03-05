@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="300.0" minWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="300.0" minWidth="300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <GridPane layoutX="89.0" layoutY="110.0" prefHeight="137.0" prefWidth="387.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="100.0" AnchorPane.topAnchor="80.0">
         <columnConstraints>
@@ -31,11 +30,6 @@
                   <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
-               </GridPane.margin>
-            </TextField>
             <Button alignment="CENTER" mnemonicParsing="false" prefHeight="35.0" prefWidth="128.0" text="Đăng nhập" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="5.0" left="50.0" top="5.0" />
@@ -49,6 +43,11 @@
                   <Font name="System Bold" size="12.0" />
                </font>
             </Label>
+            <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </GridPane.margin>
+            </PasswordField>
          </children>
       </GridPane>
    </children>

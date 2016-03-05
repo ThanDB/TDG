@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.MainLayoutController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
@@ -35,8 +35,8 @@
             <content>
               <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
                      <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemHopDong" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiHopDong" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                      </children>
                   </AnchorPane>
             </content>
@@ -45,8 +45,8 @@
                <content>
                   <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
                      <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemBaoCao" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiBaoCao" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                      </children>
                   </AnchorPane>
                </content>
@@ -61,10 +61,10 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                                          <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                                          <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemMayMocThietBi" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" onAction="#timKiemBatDongSan" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" onAction="#timKiemGiaTriDoanhNghiep" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" onAction="#timKiemPhuongTienVanTai" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                        </children>
                                     </AnchorPane>
                               </content>
@@ -73,10 +73,10 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                                          <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                                          <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#taoMoiMayMocThietBi" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiBatDongSan" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" onAction="#taoMoiGiaTriDoanhNghiep" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" onAction="#taoMoiPhuongTienVanTai" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                                        </children>
                                     </AnchorPane>
                               </content>
@@ -111,8 +111,8 @@
                <content>
                   <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
                      <children>
-                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
-                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemKhachHang" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiKhachHang" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
                      </children>
                   </AnchorPane>
                </content>

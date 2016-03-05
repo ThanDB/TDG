@@ -1,4 +1,4 @@
-package dev.rapid.controller;
+package mockup.controller;
 
 import java.io.IOException;
 
@@ -15,7 +15,7 @@ import javafx.stage.Stage;
 public class Mockup extends Application {
 
 	private Stage primaryStage;
-	private static BorderPane mainLayout;
+	public BorderPane mainLayout;
 
 	private static AnchorPane loginBox;
 
@@ -45,6 +45,9 @@ public class Mockup extends Application {
 			Scene scene = new Scene(loginBox);
 			primaryStage.setScene(scene);
 			primaryStage.show();
+
+			LoginController controller = loader.getController();
+			controller.setApp(this);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -57,8 +60,19 @@ public class Mockup extends Application {
 		try {
 			// Load main layout from fxml file.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/MainLayout.fxml"));
+			loader.setLocation(Mockup.class.getResource("/fxml/main_layout.fxml"));
 			mainLayout = (BorderPane) loader.load();
+
+			MainLayoutController controller = loader.getController();
+			controller.setApp(this);
+
+
+			FXMLLoader loaderContent = new FXMLLoader();
+			loaderContent.setLocation(Mockup.class.getResource("/fxml/hop_dong_list.fxml"));
+			AnchorPane content = (AnchorPane) loaderContent.load();
+
+
+			mainLayout.setRight(content);
 
 			// Show the scene containing the main layout.
 			Scene scene = new Scene(mainLayout);

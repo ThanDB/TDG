@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="600.0" minWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.HopDongListController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="6.0" text="Tìm kiếm hợp đồng" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>
@@ -81,12 +80,12 @@
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Tìm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#timKiem" prefHeight="25.0" prefWidth="63.0" text="Tìm" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="60.0" />
                </GridPane.margin>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="61.0" text="Xóa" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#xoaThongTin" prefHeight="25.0" prefWidth="61.0" text="Xóa" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="130.0" />
                </GridPane.margin>
@@ -94,7 +93,7 @@
          </children>
       </GridPane>
       <Line endX="680.0" layoutX="110.0" layoutY="200.0" startX="-100.0" />
-      <Label layoutX="14.0" layoutY="207.0" text="Kết quả tìm kiếm:" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <AnchorPane layoutX="10.0" layoutY="224.0" prefHeight="360.0" prefWidth="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <Label fx:id="result_info" layoutX="14.0" layoutY="207.0" text="Kết quả tìm kiếm:" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <AnchorPane fx:id="result_area" layoutX="10.0" layoutY="224.0" prefHeight="360.0" prefWidth="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
    </children>
 </AnchorPane>

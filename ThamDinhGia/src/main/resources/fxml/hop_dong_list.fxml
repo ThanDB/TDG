@@ -55,7 +55,7 @@
                   <Insets left="160.0" right="20.0" />
                </GridPane.margin>
             </TextField>
-            <ComboBox prefHeight="25.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <ComboBox fx:id="trangThaiCbb" prefHeight="25.0" prefWidth="117.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label text="Từ" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label text="Đến" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
@@ -80,7 +80,7 @@
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Button mnemonicParsing="false" onAction="#timKiem" prefHeight="25.0" prefWidth="63.0" text="Tìm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button fx:id="search" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="63.0" text="Tìm" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="60.0" />
                </GridPane.margin>
@@ -90,10 +90,12 @@
                   <Insets left="130.0" />
                </GridPane.margin>
             </Button>
+            <Label text="Thanh toán" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <ComboBox fx:id="trangThaiThanhToanCbb" prefHeight="25.0" prefWidth="131.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
          </children>
       </GridPane>
       <Line endX="680.0" layoutX="110.0" layoutY="200.0" startX="-100.0" />
       <Label fx:id="result_info" layoutX="14.0" layoutY="207.0" text="Kết quả tìm kiếm:" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <AnchorPane fx:id="result_area" layoutX="10.0" layoutY="224.0" prefHeight="360.0" prefWidth="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <AnchorPane fx:id="result_area" layoutX="10.0" layoutY="224.0" prefHeight="360.0" prefWidth="780.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="230.0" />
    </children>
 </AnchorPane>

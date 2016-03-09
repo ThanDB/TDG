@@ -2,7 +2,6 @@ package mockup.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 public class MainLayoutController extends AbstractController{
@@ -52,6 +51,10 @@ public class MainLayoutController extends AbstractController{
 
 			contentArea = (AnchorPane) loaderContent.load();
 
+			HopDongListController controller = loaderContent.getController();
+
+			controller.setApp(app);
+
 			app.mainLayout.setRight(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -85,6 +88,8 @@ public class MainLayoutController extends AbstractController{
 			loaderContent.setLocation(Mockup.class.getResource("/fxml/bao_cao_list.fxml"));
 
 			contentArea = (AnchorPane) loaderContent.load();
+			BaoCaoListController controller = loaderContent.getController();
+			controller.setApp(app);
 
 			app.mainLayout.setRight(contentArea);
 		} catch (Exception e) {

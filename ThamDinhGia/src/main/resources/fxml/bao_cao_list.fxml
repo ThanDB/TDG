@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="600.0" minWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.BaoCaoListController">
    <children>
       <Label alignment="CENTER" layoutX="122.0" layoutY="14.0" text="Tìm kiếm báo cáo" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>
@@ -94,12 +93,12 @@
                   <Insets left="175.0" right="5.0" />
                </GridPane.margin>
             </DatePicker>
-            <ComboBox prefHeight="25.0" prefWidth="116.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <ComboBox fx:id="trangThaiBaoCaoCbb" prefHeight="25.0" prefWidth="116.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets left="25.0" />
                </GridPane.margin>
             </ComboBox>
-            <Button mnemonicParsing="false" text="Tìm kiếm" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Button mnemonicParsing="false" onAction="#search" text="Tìm kiếm" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets left="40.0" />
                </GridPane.margin>
@@ -113,6 +112,6 @@
       </GridPane>
       <Line endX="660.0" layoutX="110.0" layoutY="208.0" startX="-100.0" />
       <Label layoutX="10.0" layoutY="216.0" text="Kết quả tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <AnchorPane layoutX="14.0" layoutY="233.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="233.0" />
+      <AnchorPane fx:id="baoCaoSearchResultArea" layoutX="14.0" layoutY="233.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="233.0" />
    </children>
 </AnchorPane>

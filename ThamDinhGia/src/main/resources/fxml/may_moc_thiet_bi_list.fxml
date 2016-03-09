@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="600.0" minWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.MayMocThietBiListController">
    <children>
       <Label alignment="CENTER" layoutX="14.0" layoutY="6.0" text="Tìm kiếm máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>
@@ -187,7 +186,7 @@
                   <Insets left="155.0" />
                </GridPane.margin>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Tìm kiếm" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Button mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="67.0" text="Tìm kiếm" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets left="220.0" right="20.0" />
                </GridPane.margin>
@@ -197,6 +196,6 @@
       </GridPane>
       <Line endX="680.0" layoutX="110.0" layoutY="300.0" startX="-100.0" />
       <Label layoutX="10.0" layoutY="307.0" text="Kết quả tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <AnchorPane layoutX="14.0" layoutY="324.0" prefHeight="266.0" prefWidth="780.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      <AnchorPane fx:id="mayMocSearchResultArea" layoutX="14.0" layoutY="324.0" prefHeight="266.0" prefWidth="780.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="329.0" />
    </children>
 </AnchorPane>

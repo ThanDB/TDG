@@ -68,6 +68,9 @@ public class Mockup extends Application {
 			loaderContent.setLocation(Mockup.class.getResource("/fxml/hop_dong_list.fxml"));
 			AnchorPane content = (AnchorPane) loaderContent.load();
 
+			HopDongListController hopDongController = loaderContent.getController();
+			hopDongController.setApp(this);
+			hopDongController.search();
 
 			mainLayout.setRight(content);
 

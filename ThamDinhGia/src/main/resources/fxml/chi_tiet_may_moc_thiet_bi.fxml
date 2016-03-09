@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="600.0" minWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.ChiTietMayMocThietBiController">
    <children>
-      <Label alignment="CENTER" layoutX="14.0" layoutY="22.0" text="Chi tiết máy móc thiết bị" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+      <Label fx:id="title" alignment="CENTER" layoutX="14.0" layoutY="22.0" text="Chi tiết máy móc thiết bị" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -85,7 +84,7 @@
             <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
             <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Cập nhật" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Button fx:id="updateBtn" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="71.0" text="Cập nhật" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <GridPane.margin>
                   <Insets left="160.0" />
                </GridPane.margin>

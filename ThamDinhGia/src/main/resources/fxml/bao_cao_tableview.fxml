@@ -5,20 +5,19 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="362.0" minWidth="780.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="362.0" minWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.BaoCaoTableViewController">
    <children>
       <Pagination layoutX="230.0" layoutY="162.0" prefHeight="44.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-      <TableView prefHeight="314.0" prefWidth="780.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TableView fx:id="baoCaoTv" prefHeight="314.0" prefWidth="780.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <columns>
-          <TableColumn prefWidth="82.0" text="Mã báo cáo" />
-          <TableColumn prefWidth="90.0" text="Mã hợp đồng" />
-            <TableColumn prefWidth="125.0" text="Người thực hiện" />
-            <TableColumn prefWidth="111.0" text="Người duyệt" />
-            <TableColumn prefWidth="90.0" text="Giá trị" />
-            <TableColumn prefWidth="120.0" text="Ngày thực hiện" />
-            <TableColumn prefWidth="77.0" text="Trạng thái" />
-            <TableColumn prefWidth="83.0" />
+          <TableColumn fx:id="cMaBaoCaoTv" prefWidth="82.0" text="Mã báo cáo" />
+          <TableColumn fx:id="cMaHopDongTv" prefWidth="90.0" text="Mã hợp đồng" />
+            <TableColumn fx:id="cNguoiThucHienTv" prefWidth="125.0" text="Người thực hiện" />
+            <TableColumn fx:id="cNguoiDuyetTv" prefWidth="111.0" text="Người duyệt" />
+            <TableColumn fx:id="cGiaTriTv" prefWidth="90.0" text="Giá trị" />
+            <TableColumn fx:id="cNgayThucHienTv" prefWidth="120.0" text="Ngày thực hiện" />
+            <TableColumn fx:id="cTrangThaiTv" prefWidth="77.0" text="Trạng thái" />
+            <TableColumn fx:id="cActionTv" prefWidth="83.0" />
         </columns>
       </TableView>
    </children>

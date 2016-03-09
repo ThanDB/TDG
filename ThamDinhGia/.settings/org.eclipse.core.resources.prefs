@@ -1,9 +1,15 @@
 eclipse.preferences.version=1
 encoding//src/main/java/dev/rapid/controller/App.java=UTF-8
 encoding//src/main/java/dev/rapid/dao/impl/KhachHangDaoImpl.java=UTF-8
+encoding//src/main/java/mockup/controller/BaoCaoListController.java=UTF-8
+encoding//src/main/java/mockup/controller/BaoCaoTableViewController.java=UTF-8
+encoding//src/main/java/mockup/controller/ChiTietBaoCaoController.java=UTF-8
 encoding//src/main/java/mockup/controller/ChiTietHopDongController.java=UTF-8
+encoding//src/main/java/mockup/controller/ChiTietKhachHangController.java=UTF-8
 encoding//src/main/java/mockup/controller/HopDongListController.java=UTF-8
+encoding//src/main/java/mockup/controller/HopDongTableViewController.java=UTF-8
 encoding//src/main/java/mockup/controller/KhachHangListController.java=UTF-8
+encoding//src/main/java/mockup/controller/KhachHangTableViewController.java=UTF-8
 encoding//src/main/java/mockup/controller/LoginController.java=UTF-8
 encoding//src/main/java/mockup/controller/MainLayoutController.java=UTF-8
 encoding//src/main/java/mockup/controller/Mockup.java=UTF-8

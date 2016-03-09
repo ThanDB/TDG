@@ -53,7 +53,7 @@
             <TextField GridPane.columnIndex="3" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Tìm kiếm" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="66.0" text="Tìm kiếm" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets left="150.0" />
                </GridPane.margin>
@@ -67,6 +67,6 @@
       </GridPane>
       <Line endX="600.0" layoutX="151.0" layoutY="177.0" startX="-100.0" />
       <Label layoutX="51.0" layoutY="187.0" text="Kết quả tìm kiếm" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
-      <AnchorPane layoutX="50.0" layoutY="210.0" prefHeight="386.0" prefWidth="700.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+      <AnchorPane fx:id="searchKhachHangResultArea" layoutX="50.0" layoutY="210.0" prefHeight="386.0" prefWidth="700.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
    </children>
 </AnchorPane>

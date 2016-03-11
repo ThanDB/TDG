@@ -77,6 +77,8 @@ public class Mockup extends Application {
 			// Show the scene containing the main layout.
 			Scene scene = new Scene(mainLayout);
 			primaryStage.setScene(scene);
+			primaryStage.setMaximized(true);
+			//primaryStage.setFullScreen(true);
 			primaryStage.show();
 		} catch (IOException e) {
 			e.printStackTrace();

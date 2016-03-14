@@ -21,4 +21,21 @@ public class ChiTietMayMocThietBiController extends AbstractController {
 		this.stage = stage;
 	}
 
+	@Override
+	protected void setUpComponentsNew() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void setUpComponentsDetail() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void setUpComponentsUpdate() {
+		// TODO Auto-generated method stub
+
+	}
 }

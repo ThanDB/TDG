@@ -4,15 +4,14 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import mockup.controller.AbstractDetailController.PROCESS_STT;
 
-public abstract class AbstractController {
+public abstract class AbstractDetailController {
 	public enum PROCESS_STT {
 		NEW, DETAIL, UPDATE
 	}
 
 	protected PROCESS_STT processStt;
-
-	protected PROCESS_STT parentProcessStt;
 
 	protected AnchorPane contentArea;
 

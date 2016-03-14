@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane minHeight="650.0" minWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+   <children>
+      <Label alignment="CENTER" layoutX="365.0" layoutY="-8.0" text="Chi tiết giá trị doanh nghiệp" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="63.0" layoutY="60.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="117.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="250.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="131.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="223.0" minWidth="10.0" prefWidth="190.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Tên doanh nghiệp" />
+            <Label text="Mã số thuế" GridPane.rowIndex="1" />
+            <Label text="Lĩnh vực kinh doanh" GridPane.rowIndex="2" />
+            <Label text="Vốn chủ sở hữu" GridPane.rowIndex="3" />
+            <Label text="Tổng giá trị tài sản" GridPane.rowIndex="4" />
+            <Label text="Tỷ suất lợi nhuận" GridPane.columnIndex="2" />
+            <Label text="Phương pháp thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Giá trị thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Thời gian thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField GridPane.columnIndex="3" />
+            <ComboBox prefHeight="25.0" prefWidth="173.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Label layoutX="50.0" layoutY="209.0" text="Thông tin khác" />
+      <TextArea layoutX="162.0" layoutY="209.0" prefHeight="134.0" prefWidth="593.0" AnchorPane.rightAnchor="50.0" />
+      <Button layoutX="286.0" layoutY="366.0" mnemonicParsing="false" text="Trở về" />
+      <Button layoutX="374.0" layoutY="366.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Sửa" />
+      <Button layoutX="471.0" layoutY="366.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Xóa" />
+   </children>
+</AnchorPane>

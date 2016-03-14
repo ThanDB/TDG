@@ -5,20 +5,17 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="360.0" minWidth="780.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.HopDongTableViewController">
+<AnchorPane minHeight="450.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.HopDongTableViewController">
    <children>
       <Pagination layoutX="-6.0" layoutY="313.0" prefHeight="52.0" prefWidth="780.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="310.0" />
-      <TableView fx:id="hopDongTv" layoutX="20.0" layoutY="2.0" prefHeight="313.0" prefWidth="780.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+      <TableView fx:id="hopDongTv" layoutX="20.0" layoutY="2.0" prefHeight="313.0" prefWidth="900.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
         <columns>
-          <TableColumn fx:id="cMaHopDongTv" prefWidth="84.0" text="Mã hợp đồng" />
-            <TableColumn fx:id="cTenKhachHangTv" prefWidth="105.0" text="Tên khách hàng" />
-            <TableColumn fx:id="cNguoiThucHienTv" prefWidth="110.0" text="Người thực hiện" />
-            <TableColumn fx:id="cNguoiKyTv" prefWidth="98.0" text="Người ký" />
-            <TableColumn fx:id="cNgayKyTv" prefWidth="87.0" text="Ngày ký" />
-          <TableColumn fx:id="cGiaTriTv" prefWidth="74.0" text="Giá trị" />
-            <TableColumn fx:id="cChuaThanhToanTv" prefWidth="99.0" text="Chưa thanh toán" />
-            <TableColumn fx:id="cTrangThaiTv" minWidth="0.0" prefWidth="69.0" text="Trạng thái" />
-            <TableColumn fx:id="cActionTv" prefWidth="140.0" />
+          <TableColumn fx:id="cMaHopDongTv" prefWidth="112.0" text="Số HĐ" />
+            <TableColumn fx:id="cTenKhachHangTv" prefWidth="137.0" text="Khách hàng" />
+            <TableColumn fx:id="cNguoiThucHienTv" prefWidth="137.0" text="Người thực hiện" />
+            <TableColumn fx:id="cNgayKyTv" prefWidth="104.0" text="Ngày ký" />
+          	<TableColumn fx:id="cGiaTriTv" minWidth="0.0" prefWidth="113.0" text="Giá trị" />
+            <TableColumn fx:id="cActionTv" prefWidth="64.0" />
         </columns>
       </TableView>
    </children>

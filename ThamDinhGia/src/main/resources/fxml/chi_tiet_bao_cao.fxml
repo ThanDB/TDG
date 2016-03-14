@@ -58,8 +58,8 @@
                </GridPane.margin>
             </TextField>
             <TextField fx:id="giaTriTxt" GridPane.columnIndex="3" />
-            <ComboBox fx:id="trangThaiCbb" prefHeight="25.0" prefWidth="297.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
             <DatePicker fx:id="ngayThucHienDp" prefHeight="25.0" prefWidth="295.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ComboBox fx:id="trangThaiCbb" prefHeight="25.0" prefWidth="297.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <Line endX="650.0" layoutX="115.0" layoutY="192.0" startX="-100.0" />
@@ -78,9 +78,9 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Loại tài sản" />
+            <Label fx:id="loaiTaiSanLbl" text="Loại tài sản" />
             <ComboBox fx:id="loaiTaiSanCbb" prefWidth="150.0" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" onAction="#taoMoiTaiSan" prefHeight="25.0" prefWidth="129.0" text="Tạo mới" GridPane.columnIndex="2" />
+            <Button fx:id="taoMoiTaiSanBtn" mnemonicParsing="false" onAction="#taoMoiTaiSan" prefHeight="25.0" prefWidth="129.0" text="Tạo mới" GridPane.columnIndex="2" />
          </children>
       </GridPane>
       <TableView fx:id="taiSanDataTv" layoutX="10.0" layoutY="259.0" prefHeight="171.0" prefWidth="780.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
@@ -96,8 +96,9 @@
       </TableView>
       <Line endX="660.0" layoutX="110.0" layoutY="440.0" startX="-100.0" />
       <Label layoutX="10.0" layoutY="448.0" prefHeight="17.0" prefWidth="761.0" text="Ghi chú" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
-      <TextArea layoutX="10.0" layoutY="465.0" prefHeight="91.0" prefWidth="761.0" />
-      <Button fx:id="updateBtn" layoutX="301.0" layoutY="561.0" mnemonicParsing="false" onAction="#update" text="Cập nhật" />
-      <Button layoutX="400.0" layoutY="561.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="63.0" text="Xóa" />
+      <TextArea fx:id="ghiChuTxt" layoutX="10.0" layoutY="465.0" prefHeight="91.0" prefWidth="761.0" />
+      <Button fx:id="updateBtn" layoutX="400.0" layoutY="561.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="67.0" text="Cập nhật" />
+      <Button fx:id="deleteBtn" layoutX="495.0" layoutY="561.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="63.0" text="Xóa" />
+      <Button layoutX="309.0" layoutY="561.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="67.0" text="Trở về" />
    </children>
 </AnchorPane>

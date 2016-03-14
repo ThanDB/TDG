@@ -8,14 +8,14 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="600.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.ChiTietHopDongController">
+<AnchorPane minHeight="650.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.ChiTietHopDongController">
    <children>
       <Label fx:id="title" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" prefHeight="38.0" prefWidth="580.0" text="Chi tiết hợp đồng" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <GridPane layoutX="10.0" layoutY="62.0" prefHeight="116.0" prefWidth="700.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+      <GridPane layoutX="10.0" layoutY="62.0" prefHeight="95.0" prefWidth="701.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="193.0" minWidth="10.0" prefWidth="96.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="340.0" minWidth="10.0" prefWidth="279.0" />
@@ -26,46 +26,38 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="Số hợp đồng" />
             <Label text="Ngày ký" GridPane.rowIndex="1" />
             <Label text="Giá trị" GridPane.rowIndex="2" />
-            <TextField fx:id="soHopDongTxt" prefHeight="25.0" prefWidth="103.0" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin></TextField>
-            <TextField fx:id="giaTriTxt" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin></TextField>
-            <DatePicker fx:id="ngayKyDp" prefHeight="25.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin></DatePicker>
             <Label text="Trạng thái" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <ComboBox fx:id="trangThaiCbb" prefHeight="25.0" prefWidth="225.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets />
-               </GridPane.margin></ComboBox>
-            <Label text="Đã thanh toán" GridPane.rowIndex="3" />
-            <Label text="Người thực hiện" GridPane.columnIndex="2" />
+            <Label text="Đã thanh toán" GridPane.columnIndex="2" />
             <Label text="Người ký" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <TextField fx:id="nguoiThucHienTxt" GridPane.columnIndex="3" />
-            <TextField fx:id="nguoiKyTxt" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField fx:id="daThanhToanTxt" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="soHopDongTxt" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
             </TextField>
+            <DatePicker fx:id="ngayKyDp" maxWidth="1.7976931348623157E308" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </DatePicker>
+            <TextField fx:id="giaTriTxt" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="daThanhToanTxt" GridPane.columnIndex="3" />
+            <TextField fx:id="nguoiKyTxt" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ComboBox fx:id="trangThaiCbb" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <Label layoutY="171.0" text="Thông tin khách hàng" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="20.0" />
-      <Button layoutX="10.0" layoutY="192.0" mnemonicParsing="false" onAction="#taoMoiKhachHang" text="Tạo mới" AnchorPane.leftAnchor="50.0" />
-      <Button layoutX="89.0" layoutY="192.0" mnemonicParsing="false" onAction="#timKiemKhachHang" text="Tìm kiếm" AnchorPane.leftAnchor="130.0" />
-      <Line endX="600.0" layoutX="150.0" layoutY="170.0" startX="-100.0" />
-      <GridPane layoutX="14.0" layoutY="225.0" prefHeight="170.0" prefWidth="439.0" AnchorPane.leftAnchor="50.0">
+      <TextArea fx:id="ghiChuTxt" layoutX="137.0" layoutY="149.0" prefHeight="66.0" AnchorPane.leftAnchor="138.0" AnchorPane.rightAnchor="50.0" />
+      <Label layoutY="171.0" text="Thông tin khách hàng" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="220.0" />
+      <Line endX="600.0" layoutX="150.0" layoutY="220.0" startX="-100.0" />
+      <GridPane layoutX="14.0" layoutY="225.0" prefHeight="170.0" prefWidth="439.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="275.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="198.0" minWidth="10.0" prefWidth="119.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="323.0" minWidth="10.0" prefWidth="277.0" />
@@ -92,19 +84,24 @@
             <Label fx:id="faxLbl" text="Fax" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <Label fx:id="daiDienLbl" text="Đại diện" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="maSoThueLbl" text="Mã số thuế" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Button mnemonicParsing="false" onAction="#suaKhachHang" prefHeight="25.0" prefWidth="80.0" text="Sửa" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Button fx:id="suaKhachHangBtn" mnemonicParsing="false" onAction="#suaKhachHang" prefHeight="25.0" prefWidth="54.0" text="Sửa" GridPane.columnIndex="1" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <Line endX="600.0" layoutX="150.0" layoutY="400.0" startX="-100.0" />
-      <Label layoutX="50.0" layoutY="408.0" text="Danh sách báo cáo" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="408.0" />
-      <TableView fx:id="baoCaoTv" layoutX="50.0" layoutY="425.0" prefHeight="136.0" prefWidth="484.0" AnchorPane.leftAnchor="50.0">
+      <Line endX="600.0" layoutX="150.0" layoutY="450.0" startX="-100.0" />
+      <Label layoutX="50.0" layoutY="408.0" text="Danh sách báo cáo" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="458.0" />
+      <TableView fx:id="baoCaoTv" layoutX="50.0" layoutY="425.0" prefHeight="136.0" prefWidth="620.0" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="475.0">
         <columns>
-          <TableColumn fx:id="cMaBaoCaoTv" prefWidth="126.0" text="Mã báo cáo" />
-            <TableColumn fx:id="cGiaTriTv" prefWidth="125.0" text="Giá trị" />
-            <TableColumn fx:id="cTrangThaiTv" prefWidth="135.0" text="Trạng thái" />
-            <TableColumn fx:id="cActionTv" prefWidth="96.0" />
+          <TableColumn fx:id="cMaBaoCaoTv" prefWidth="126.0" text="Số báo cáo" />
+            <TableColumn fx:id="cGiaTriTv" prefWidth="142.0" text="Giá trị thẩm định" />
+            <TableColumn fx:id="cNguoiThucHienTv" prefWidth="159.0" text="Người thực hiện" />
+            <TableColumn fx:id="cTrangThaiTv" prefWidth="127.0" text="Trạng thái" />
+            <TableColumn fx:id="cActionTv" prefWidth="63.0" />
         </columns>
       </TableView>
-      <Button fx:id="updateBtn" layoutX="378.0" layoutY="574.0" mnemonicParsing="false" onAction="#updateHopDong" prefHeight="25.0" prefWidth="84.0" text="Cập nhật" AnchorPane.bottomAnchor="6.0" />
+      <Label layoutX="50.0" layoutY="172.0" text="Ghi chú" />
+      <Button fx:id="taoMoiKhachHangBtn" layoutX="50.0" layoutY="242.0" mnemonicParsing="false" onAction="#taoMoiKhachHang" text="Tạo mới" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="242.0" />
+      <Button fx:id="timKiemKhachHangBtn" layoutX="137.0" layoutY="242.0" mnemonicParsing="false" onAction="#timKiemKhachHang" text="Tìm kiếm" />
+      <Button fx:id="updateBtn" layoutX="401.0" layoutY="624.0" mnemonicParsing="false" onAction="#updateHopDong" prefHeight="25.0" prefWidth="69.0" text="Cập nhật" />
+      <Button fx:id="troVeBtn" layoutX="323.0" layoutY="624.0" mnemonicParsing="false" onAction="#back" prefHeight="25.0" prefWidth="60.0" text="Trở về" />
    </children>
 </AnchorPane>

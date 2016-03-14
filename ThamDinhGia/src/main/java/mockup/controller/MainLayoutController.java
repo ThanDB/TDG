@@ -2,9 +2,10 @@ package mockup.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
-public class MainLayoutController extends AbstractController{
+public class MainLayoutController extends AbstractListController{
 //	@FXML
 //	private Button timKiemHopDong;
 //
@@ -41,11 +42,22 @@ public class MainLayoutController extends AbstractController{
 //	@FXML
 //	private Button taoMoiPhuongTienVanTai;
 
+	@FXML
+	private Label welcomeLbl;
+
 	private Mockup app;
+
+	private static int countClick = 0;
+
+	@FXML
+	private void logout() {}
 
 	@FXML
 	private void timKiemHopDong() {
+		setWelcomeLbl("Xin chào: Nguyễn Văn A");
+
 		try {
+			System.out.println("Clicked: " + (countClick++));
 			FXMLLoader loaderContent = new FXMLLoader();
 			loaderContent.setLocation(MainLayoutController.class.getResource("/fxml/hop_dong_list.fxml"));
 
@@ -55,31 +67,31 @@ public class MainLayoutController extends AbstractController{
 
 			controller.setApp(app);
 
-			app.mainLayout.setRight(contentArea);
+			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
 	}
 
-	@FXML
-	private void taoMoiHopDong() {
-		try {
-			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_hop_dong.fxml"));
-
-			contentArea = (AnchorPane) loader.load();
-
-			ChiTietHopDongController controller = loader.getController();
-			controller.setTitle("Tạo mới hợp đồng");
-			controller.setUpdateButtonTitle("Tạo mới");
-			controller.setApp(app);
-
-			app.mainLayout.setRight(contentArea);
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-	}
+//	@FXML
+//	private void taoMoiHopDong() {
+//		try {
+//			FXMLLoader loader = new FXMLLoader();
+//			loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_hop_dong.fxml"));
+//
+//			contentArea = (AnchorPane) loader.load();
+//
+//			ChiTietHopDongController controller = loader.getController();
+//			controller.setTitle("Tạo mới hợp đồng");
+//			controller.setUpdateButtonTitle("Tạo mới");
+//			controller.setApp(app);
+//
+//			app.mainLayout.setCenter(contentArea);
+//		} catch (Exception e) {
+//			// TODO: handle exception
+//			e.printStackTrace();
+//		}
+//	}
 
 	@FXML
 	private void timKiemBaoCao() {
@@ -91,7 +103,7 @@ public class MainLayoutController extends AbstractController{
 			BaoCaoListController controller = loaderContent.getController();
 			controller.setApp(app);
 
-			app.mainLayout.setRight(contentArea);
+			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -105,7 +117,7 @@ public class MainLayoutController extends AbstractController{
 
 			contentArea = (AnchorPane) loaderContent.load();
 
-			app.mainLayout.setRight(contentArea);
+			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -119,7 +131,7 @@ public class MainLayoutController extends AbstractController{
 
 			contentArea = (AnchorPane) loaderContent.load();
 
-			app.mainLayout.setRight(contentArea);
+			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -133,7 +145,7 @@ public class MainLayoutController extends AbstractController{
 
 			contentArea = (AnchorPane) loaderContent.load();
 
-			app.mainLayout.setRight(contentArea);
+			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -177,7 +189,7 @@ public class MainLayoutController extends AbstractController{
 
 			contentArea = (AnchorPane) loaderContent.load();
 
-			app.mainLayout.setRight(contentArea);
+			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -191,7 +203,7 @@ public class MainLayoutController extends AbstractController{
 
 			contentArea = (AnchorPane) loaderContent.load();
 
-			app.mainLayout.setRight(contentArea);
+			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
@@ -199,6 +211,10 @@ public class MainLayoutController extends AbstractController{
 
 	public void setApp(Mockup obj) {
 		this.app = obj;
+	}
+
+	public void setWelcomeLbl(String welcome) {
+		welcomeLbl.setText(welcome);
 	}
 
 }

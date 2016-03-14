@@ -4,9 +4,11 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Mockup extends Application {
@@ -26,9 +28,9 @@ public class Mockup extends Application {
 		this.primaryStage = primaryStage;
 		this.primaryStage.setTitle("Phần mềm thẩm định giá");
 
-		//initMainLayout();
+		initMainLayout();
 
-		initLogin();
+		//initLogin();
 	}
 
 	private void initLogin() {
@@ -57,12 +59,12 @@ public class Mockup extends Application {
 		try {
 			// Load main layout from fxml file.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/main_layout.fxml"));
+			loader.setLocation(Mockup.class.getResource("/fxml/main_layout_copy.fxml"));
 			mainLayout = (BorderPane) loader.load();
 
 			MainLayoutController controller = loader.getController();
 			controller.setApp(this);
-
+			controller.setWelcomeLbl("Xin chào: Nguyễn Văn B");
 
 			FXMLLoader loaderContent = new FXMLLoader();
 			loaderContent.setLocation(Mockup.class.getResource("/fxml/hop_dong_list.fxml"));
@@ -70,14 +72,15 @@ public class Mockup extends Application {
 
 			HopDongListController hopDongController = loaderContent.getController();
 			hopDongController.setApp(this);
-			hopDongController.search();
+			//hopDongController.search();
 
-			mainLayout.setRight(content);
+			mainLayout.setCenter(content);
 
 			// Show the scene containing the main layout.
 			Scene scene = new Scene(mainLayout);
 			primaryStage.setScene(scene);
 			primaryStage.setMaximized(true);
+
 			//primaryStage.setFullScreen(true);
 			primaryStage.show();
 		} catch (IOException e) {

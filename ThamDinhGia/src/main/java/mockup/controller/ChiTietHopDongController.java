@@ -2,6 +2,7 @@ package mockup.controller;
 
 import java.io.IOException;
 
+import dev.rapid.util.Constants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -18,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
@@ -68,6 +70,21 @@ public class ChiTietHopDongController extends AbstractController{
 	@FXML
 	private TextField nguoiKyTxt;
 
+	@FXML
+	private TextArea ghiChuTxt;
+
+
+	@FXML
+	private Button taoMoiKhachHangBtn;
+
+	@FXML
+	private Button timKiemKhachHangBtn;
+
+	@FXML
+	private Button suaKhachHangBtn;
+
+	@FXML
+	private Button backBtn;
 
 
 	@FXML
@@ -218,17 +235,17 @@ public class ChiTietHopDongController extends AbstractController{
 
 	@FXML
 	private void updateHopDong() {
-		this.stage.close();
+		if(PROCESS_STT.DETAIL.equals(processStt)) {
+			processStt = PROCESS_STT.UPDATE;
+			setUpComponents(Constants.UPDATE_HOPDONG_TEXT, Constants.UPDATE_TEXT);
+			return;
+		}
 	}
 
 	@FXML
 	private void initialize() {
-		trangThaiCbb.getItems().addAll(
-        		"Chưa xong",
-        		"Đã xong",
-        		"Hủy"
-        		);
-		trangThaiCbb.setPromptText("Trạng thái");
+		trangThaiCbb.getItems().addAll(Constants.HOPDONG_STT_LIST);
+		trangThaiCbb.setPromptText(Constants.STATUS_TEXT);
 	}
 
 	private Mockup app;
@@ -256,7 +273,7 @@ public class ChiTietHopDongController extends AbstractController{
 			soHopDongTxt.setText(hopDongDTO.getMaHopDong());
 			giaTriTxt.setText(hopDongDTO.getMaHopDong());
 			daThanhToanTxt.setText(hopDongDTO.getMaHopDong());
-			nguoiThucHienTxt.setText(hopDongDTO.getMaHopDong());
+			//nguoiThucHienTxt.setText(hopDongDTO.getMaHopDong());
 			nguoiKyTxt.setText(hopDongDTO.getMaHopDong());
 
 			tenKhachHangLbl.setText("Nguyen Van A");
@@ -265,6 +282,8 @@ public class ChiTietHopDongController extends AbstractController{
 			faxLbl.setText("01234567890");
 			daiDienLbl.setText("Nguyen Van B");
 			maSoThueLbl.setText("01234567890");
+
+			fillBaoCaoDataTableView();
 		}
 
 	}
@@ -309,12 +328,12 @@ public class ChiTietHopDongController extends AbstractController{
 
                 	try {
                     	FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_bao_cao.fxml"));
+                        loader.setLocation(Mockup.class.getResource(Constants.CHI_TIET_BAOCAO_FILE_PATH));
             			AnchorPane page = (AnchorPane) loader.load();
 
             			// Create the dialog Stage.
             	        Stage dialogStage = new Stage();
-            	        dialogStage.setTitle("Thông tin báo cáo");
+            	        dialogStage.setTitle(Constants.DETAIL_BAOCAO_TEXT);
             	        dialogStage.initModality(Modality.WINDOW_MODAL);
             	        dialogStage.initOwner(app.primaryStage);
             	        Scene scene = new Scene(page);
@@ -322,12 +341,13 @@ public class ChiTietHopDongController extends AbstractController{
 
             	        ChiTietBaoCaoController controller = loader.getController();
 
-            	        controller.setTitle("Thông tin báo cáo");
-            	        controller.setUpdateButtonTitle("Cập nhật");
             	        controller.setDialogStage(dialogStage);
             	        controller.setBaoCao(new BaoCaoDTO());
             	        controller.fillData();
             	        //controller.setKhachHangTableViewController(ChiTie.this);
+            	        controller.processStt = ChiTietHopDongController.this.processStt;
+            	        controller.parentProcessStt = ChiTietHopDongController.this.processStt;
+            	        controller.setUpComponents(Constants.DETAIL_BAOCAO_TEXT, Constants.MODIFY_TEXT);
             	        controller.initData();
             	        controller.initTaiSanTableView();
             	        controller.setStage(dialogStage);
@@ -362,4 +382,40 @@ public class ChiTietHopDongController extends AbstractController{
             }
         }
     }
+
+	@Override
+	protected void setUpComponentsNew() {
+		setComponents(true);
+	}
+
+	@Override
+	protected void setUpComponentsDetail() {
+		setComponents(false);
+	}
+
+	@Override
+	protected void setUpComponentsUpdate() {
+		setComponents(true);
+	}
+
+	private void setComponents(boolean value) {
+		soHopDongTxt.setEditable(value);
+		ngayKyDp.setEditable(value);
+		giaTriTxt.setEditable(value);
+		daThanhToanTxt.setEditable(value);
+		nguoiKyTxt.setEditable(value);
+		trangThaiCbb.setEditable(value);
+		ghiChuTxt.setEditable(value);
+
+		taoMoiKhachHangBtn.setVisible(value);
+		timKiemKhachHangBtn.setVisible(value);
+		suaKhachHangBtn.setVisible(value);
+	}
+
+	@FXML
+	private void back() {
+		if(this.stage != null) {
+			this.stage.close();
+		}
+	}
 }

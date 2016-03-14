@@ -26,6 +26,10 @@ public class ChiTietKhachHangController extends AbstractController {
 	private TextField maSoThueTxt;
 
 	private Mockup app;
+	private Stage dialogStage;
+	private KhachHangDTO khachHang;
+	private ChiTietHopDongController chiTietHopDongController;
+	private KhachHangTableViewController khachHangTableViewController;
 
 	@FXML
 	private boolean update() {
@@ -85,11 +89,6 @@ public class ChiTietKhachHangController extends AbstractController {
 		this.app = obj;
 	}
 
-	private Stage dialogStage;
-	private KhachHangDTO khachHang;
-	private ChiTietHopDongController chiTietHopDongController;
-	private KhachHangTableViewController khachHangTableViewController;
-
 	public void setDialogStage(Stage dialogStage) {
 		this.dialogStage = dialogStage;
 	}
@@ -106,6 +105,20 @@ public class ChiTietKhachHangController extends AbstractController {
 		this.khachHangTableViewController = khachHangTableViewController;
 	}
 
+	@Override
+	protected void setUpComponentsNew() {
+		// TODO Auto-generated method stub
 
+	}
 
+	@Override
+	protected void setUpComponentsDetail() {
+		
+	}
+
+	@Override
+	protected void setUpComponentsUpdate() {
+		// TODO Auto-generated method stub
+
+	}
 }

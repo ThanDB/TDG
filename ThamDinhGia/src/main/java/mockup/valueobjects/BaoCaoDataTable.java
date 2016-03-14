@@ -3,11 +3,6 @@ package mockup.valueobjects;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-/**
- *
- * @author Rapid
- *
- */
 public class BaoCaoDataTable {
 	private StringProperty maBaoCao;
 	private StringProperty maHopDong;

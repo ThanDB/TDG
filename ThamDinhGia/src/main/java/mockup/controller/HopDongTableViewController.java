@@ -2,6 +2,7 @@ package mockup.controller;
 
 import java.io.IOException;
 
+import dev.rapid.util.Constants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -19,6 +20,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import mockup.controller.AbstractController.PROCESS_STT;
 import mockup.valueobjects.HopDongDTO;
 import mockup.valueobjects.HopDongDataTable;
 
@@ -32,16 +34,16 @@ public class HopDongTableViewController {
     private TableColumn<HopDongDataTable, String> cTenKhachHangTv;
     @FXML
     private TableColumn<HopDongDataTable, String> cNguoiThucHienTv;
-    @FXML
-    private TableColumn<HopDongDataTable, String> cNguoiKyTv;
+//    @FXML
+//    private TableColumn<HopDongDataTable, String> cNguoiKyTv;
     @FXML
     private TableColumn<HopDongDataTable, String> cNgayKyTv;
     @FXML
     private TableColumn<HopDongDataTable, String> cGiaTriTv;
-    @FXML
-    private TableColumn<HopDongDataTable, String> cChuaThanhToanTv;
-    @FXML
-    private TableColumn<HopDongDataTable, String> cTrangThaiTv;
+//    @FXML
+//    private TableColumn<HopDongDataTable, String> cChuaThanhToanTv;
+//    @FXML
+//    private TableColumn<HopDongDataTable, String> cTrangThaiTv;
 
     @FXML
     private TableColumn<HopDongDataTable, Boolean> cActionTv;
@@ -51,12 +53,12 @@ public class HopDongTableViewController {
     	cMaHopDongTv.setCellValueFactory(cellData -> cellData.getValue().getMaHopDong());
     	cTenKhachHangTv.setCellValueFactory(cellData -> cellData.getValue().getTenKhachHang());
     	cNguoiThucHienTv.setCellValueFactory(cellData -> cellData.getValue().getNguoiThucHien());
-    	cNguoiKyTv.setCellValueFactory(cellData -> cellData.getValue().getNguoiKy());
+    	//cNguoiKyTv.setCellValueFactory(cellData -> cellData.getValue().getNguoiKy());
     	cNgayKyTv.setCellValueFactory(cellData -> cellData.getValue().getNgayKy());
     	cGiaTriTv.setCellValueFactory(cellData -> cellData.getValue().getGiaTri());
 
-    	cChuaThanhToanTv.setCellValueFactory(cellData -> cellData.getValue().getChuaThanhToan());
-    	cTrangThaiTv.setCellValueFactory(cellData -> cellData.getValue().getTrangThai());
+//    	cChuaThanhToanTv.setCellValueFactory(cellData -> cellData.getValue().getChuaThanhToan());
+//    	cTrangThaiTv.setCellValueFactory(cellData -> cellData.getValue().getTrangThai());
 
 		cActionTv.setCellValueFactory(
                 new Callback<TableColumn.CellDataFeatures<HopDongDataTable, Boolean>,
@@ -88,7 +90,7 @@ public class HopDongTableViewController {
 
 	//Define the button cell
     private class ButtonCell extends TableCell<HopDongDataTable, Boolean> {
-        final Button viewButton = new Button("Chi tiết");
+        final Button viewButton = new Button(Constants.DETAIL_TEXT);
 //        final Button deleteButton = new Button("Xóa");
 
         ButtonCell(){
@@ -109,16 +111,15 @@ public class HopDongTableViewController {
                     //...
                 	System.out.println("" + getIndex());
                 	HopDongDataTable curRecord = hopDongData.get(getIndex());
-                	System.out.println("do something");
 
                 	try {
                     	FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_hop_dong.fxml"));
+                        loader.setLocation(Mockup.class.getResource(Constants.CHI_TIET_HOPDONG_FILE_PATH));
             			AnchorPane page = (AnchorPane) loader.load();
 
             			// Create the dialog Stage.
             	        Stage dialogStage = new Stage();
-            	        dialogStage.setTitle("Thông tin hợp đồng");
+            	        dialogStage.setTitle(Constants.DETAIL_HOPDONG_TEXT);
             	        dialogStage.initModality(Modality.WINDOW_MODAL);
             	        dialogStage.initOwner(app.primaryStage);
             	        Scene scene = new Scene(page);
@@ -126,14 +127,16 @@ public class HopDongTableViewController {
 
             	        ChiTietHopDongController controller = loader.getController();
 
-            	        controller.setTitle("Thông tin hợp đồng");
-            	        controller.setUpdateButtonTitle("Cập nhật");
+            	        controller.processStt = PROCESS_STT.DETAIL;
+            	        //controller.setTitle(Constants.CHI_TIET_HOPDONG_TEXT);
+            	        //controller.setUpdateButtonTitle(Constants.UPDATE_TEXT);
             	        controller.setDialogStage(dialogStage);
             	        controller.setHopDong(new HopDongDTO(curRecord.getMaHopDong().getValue().toString(), curRecord.getTenKhachHang().getValue().toString(), curRecord.getNguoiThucHien().getValue().toString(), curRecord.getNguoiKy().getValue().toString(), curRecord.getNgayKy().getValue().toString(), curRecord.getGiaTri().getValue().toString(), curRecord.getChuaThanhToan().getValue().toString(), curRecord.getTrangThai().getValue().toString()));
             	        controller.fillData();
+            	        controller.setUpComponents(Constants.DETAIL_HOPDONG_TEXT, Constants.MODIFY_TEXT);
             	        controller.setHopDongTableViewController(HopDongTableViewController.this);
             	        controller.setApp(app);
-            	        controller.fillBaoCaoDataTableView();
+            	        //controller.fillBaoCaoDataTableView();
 
             	        dialogStage.showAndWait();
 

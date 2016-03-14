@@ -2,6 +2,7 @@ package mockup.controller;
 
 import java.io.IOException;
 
+import dev.rapid.util.Constants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -14,14 +15,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import mockup.controller.AbstractController.PROCESS_STT;
 import mockup.valueobjects.BaoCaoDTO;
 import mockup.valueobjects.TaiSanDataTable;
 
@@ -49,7 +53,16 @@ public class ChiTietBaoCaoController extends AbstractController {
 	private ComboBox<String> trangThaiCbb;
 
 	@FXML
+	private TextArea ghiChuTxt;
+
+	@FXML
 	private ComboBox<String> loaiTaiSanCbb;
+
+	@FXML
+	private Label loaiTaiSanLbl;
+
+	@FXML
+	private Button taoMoiTaiSanBtn;
 
 	@FXML
 	private TableView<TaiSanDataTable> taiSanDataTv;
@@ -142,8 +155,23 @@ public class ChiTietBaoCaoController extends AbstractController {
 
 	@FXML
 	public void update() {
+		if(PROCESS_STT.UPDATE.equals(PROCESS_STT.UPDATE)) {
+			processStt = PROCESS_STT.UPDATE;
+			setUpComponents(Constants.UPDATE_BAOCAO_TEXT, Constants.UPDATE_TEXT);
+			return;
+		}
+	}
+
+	@FXML
+	public void delete() {
 		this.stage.close();
 	}
+
+	@FXML
+	public void back() {
+		this.stage.close();
+	}
+
 
 	public void initData() {
 		maHopDongTxt.setText("HD-0001");
@@ -240,5 +268,36 @@ public class ChiTietBaoCaoController extends AbstractController {
     public void setStage(Stage stage) {
     	this.stage = stage;
     }
+
+	@Override
+	protected void setUpComponentsNew() {
+		setComponents(true);
+	}
+
+	@Override
+	protected void setUpComponentsDetail() {
+		setComponents(false);
+	}
+
+	@Override
+	protected void setUpComponentsUpdate() {
+		setComponents(true);
+
+	}
+
+	private void setComponents(boolean value) {
+		maHopDongTxt.setEditable(value);
+		maBaoCaoTxt.setEditable(value);
+		nguoiThucHienTxt.setEditable(value);
+		nguoiDuyetTxt.setEditable(value);
+		giaTriTxt.setEditable(value);
+		ngayThucHienDp.setEditable(value);
+		trangThaiCbb.setEditable(value);
+		ghiChuTxt.setEditable(value);
+
+		loaiTaiSanLbl.setVisible(value);
+		loaiTaiSanCbb.setVisible(value);
+		taoMoiTaiSanBtn.setVisible(value);
+	}
 
 }

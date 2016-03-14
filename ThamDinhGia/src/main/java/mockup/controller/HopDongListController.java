@@ -1,14 +1,20 @@
 package mockup.controller;
 
+import dev.rapid.util.Constants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import mockup.controller.AbstractController.PROCESS_STT;
+import mockup.valueobjects.HopDongDTO;
 import mockup.valueobjects.HopDongDataTable;
 
-public class HopDongListController extends AbstractController {
+public class HopDongListController extends AbstractListController {
 	@FXML
 	private ComboBox<String> trangThaiCbb;
 
@@ -43,24 +49,60 @@ public class HopDongListController extends AbstractController {
 	private void xoaThongTin() {}
 
 	@FXML
+	private void taoMoiHopDong() {
+		try {
+//			FXMLLoader loader = new FXMLLoader();
+//			loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_hop_dong.fxml"));
+//
+//			contentArea = (AnchorPane) loader.load();
+//
+//			ChiTietHopDongController controller = loader.getController();
+//			controller.setTitle("Tạo mới hợp đồng");
+//			controller.setUpdateButtonTitle("Tạo mới");
+//			controller.setApp(app);
+//
+//			app.mainLayout.setCenter(contentArea);
+
+			FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Mockup.class.getResource(Constants.CHI_TIET_HOPDONG_FILE_PATH));
+			AnchorPane page = (AnchorPane) loader.load();
+
+			// Create the dialog Stage.
+	        Stage dialogStage = new Stage();
+	        dialogStage.setTitle(Constants.DETAIL_HOPDONG_TEXT);
+	        dialogStage.initModality(Modality.WINDOW_MODAL);
+	        dialogStage.initOwner(app.primaryStage);
+	        Scene scene = new Scene(page);
+	        dialogStage.setScene(scene);
+
+	        ChiTietHopDongController controller = loader.getController();
+
+	        controller.processStt = PROCESS_STT.NEW;
+	        controller.setDialogStage(dialogStage);
+	        //controller.setHopDong(new HopDongDTO(curRecord.getMaHopDong().getValue().toString(), curRecord.getTenKhachHang().getValue().toString(), curRecord.getNguoiThucHien().getValue().toString(), curRecord.getNguoiKy().getValue().toString(), curRecord.getNgayKy().getValue().toString(), curRecord.getGiaTri().getValue().toString(), curRecord.getChuaThanhToan().getValue().toString(), curRecord.getTrangThai().getValue().toString()));
+	        controller.fillData();
+	        controller.setUpComponents(Constants.NEW_HOPDONG_TEXT, Constants.CREATE_NEW_TEXT);
+	        //controller.setHopDongTableViewController(HopDongTableViewController.this);
+	        controller.setApp(app);
+
+	        dialogStage.showAndWait();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+
+	@FXML
 	private void login() {
 	}
 
 	@FXML
 	private void initialize() {
-		trangThaiCbb.getItems().addAll(
-        		"Chưa xong",
-        		"Đã xong",
-        		"Hủy"
-        		);
-		trangThaiCbb.setPromptText("Trạng thái");
+		trangThaiCbb.getItems().addAll(Constants.HOPDONG_STT_LIST);
+		trangThaiCbb.setPromptText(Constants.STATUS_TEXT);
 
-		trangThaiThanhToanCbb.getItems().addAll(
-        		"Chưa thanh toán",
-        		"Chưa thanh toán hết",
-        		"Đã thanh toán xong"
-        		);
-		trangThaiThanhToanCbb.setPromptText("Trạng thái");
+		trangThaiThanhToanCbb.getItems().addAll(Constants.THANHTOAN_STT_LIST);
+		trangThaiThanhToanCbb.setPromptText(Constants.STATUS_TEXT);
 	}
 
 	public void setApp(Mockup obj) {

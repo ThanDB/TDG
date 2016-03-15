@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="386.0" minWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.KhachHangTableViewController">
+   <children>
+      <Pagination layoutX="180.0" layoutY="186.0" prefHeight="44.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <TableView fx:id="khachHangTv" layoutX="14.0" layoutY="6.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="cTenKhachHangTV" prefWidth="111.0" text="Tên khách hàng" />
+          <TableColumn fx:id="cNguoiDaiDienTv" prefWidth="116.0" text="Người đại diện" />
+            <TableColumn fx:id="cMaSoThueTv" prefWidth="104.0" text="Mã số thuế" />
+            <TableColumn fx:id="cDiaChiTv" prefWidth="115.0" text="Địa chỉ" />
+            <TableColumn fx:id="cSoDienThoaiTv" prefWidth="86.0" text="Số điện thoại" />
+            <TableColumn fx:id="cFaxTv" prefWidth="89.0" text="Fax" />
+            <TableColumn fx:id="cActionTv" prefWidth="89.0" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

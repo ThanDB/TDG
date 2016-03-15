@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="760.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mockup.controller.MainLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <left>
+      <Accordion minWidth="200.0" BorderPane.alignment="CENTER">
+        <panes>
+          <TitledPane animated="false" text="Hợp đồng">
+            <content>
+              <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemHopDong" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiHopDong" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" text="Báo cáo">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemBaoCao" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiBaoCao" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Tài sản">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Accordion AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0">
+                          <panes>
+                            <TitledPane animated="false" text="Tìm kiếm">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemMayMocThietBi" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" onAction="#timKiemBatDongSan" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" onAction="#timKiemGiaTriDoanhNghiep" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" onAction="#timKiemPhuongTienVanTai" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                            <TitledPane animated="false" text="Tạo mới">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#taoMoiMayMocThietBi" text="Máy móc thiết bị" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiBatDongSan" text="Bất động sản - dự án" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutY="50.0" mnemonicParsing="false" onAction="#taoMoiGiaTriDoanhNghiep" text="Giá trị doanh nghiệp" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                          <Button alignment="BASELINE_LEFT" layoutX="20.0" layoutY="75.0" mnemonicParsing="false" onAction="#taoMoiPhuongTienVanTai" text="Phương tiện vận tải" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Loại tài sản">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Phương pháp">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Khách hàng">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#timKiemKhachHang" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#taoMoiKhachHang" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Nhân viên">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" text="Thông tin cá nhân">
+               <content>
+                  <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" text="Tìm kiếm" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                        <Button alignment="BASELINE_LEFT" layoutX="14.0" layoutY="25.0" mnemonicParsing="false" text="Tạo mới" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="-10.0" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+</BorderPane>

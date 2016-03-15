@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.rapid.controller.CustomerListController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="6.0" prefHeight="17.0" prefWidth="579.0" text="Danh sách khách hàng" textAlignment="CENTER" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customerListTable" layoutX="14.0" layoutY="35.0" prefHeight="255.0" prefWidth="580.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="35.0">
+        <columns>
+          <TableColumn fx:id="tenKhachHangColumn" prefWidth="106.0" text="Tên khách hàng" />
+          <TableColumn fx:id="diaChiColumn" prefWidth="113.0" text="Địa chỉ" />
+            <TableColumn fx:id="dienThoaiColumn" prefWidth="79.0" text="Điện Thoại" />
+            <TableColumn fx:id="faxColumn" prefWidth="74.0" text="Fax" />
+            <TableColumn fx:id="daiDienColumn" prefWidth="101.0" text="Đại diện" />
+            <TableColumn fx:id="maSoThueColumn" prefWidth="106.0" text="Mã số thuế" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

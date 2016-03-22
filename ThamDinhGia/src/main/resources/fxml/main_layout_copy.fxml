@@ -21,7 +21,7 @@
                   </AnchorPane>
             </content> -->
           </TitledPane>
-            <TitledPane animated="false" maxHeight="-Infinity" text="Báo cáo">
+            <TitledPane animated="false" maxHeight="-Infinity" text="Chứng thư">
                <!-- <content>
                   <AnchorPane maxHeight="1.7976931348623157E308" minHeight="-Infinity">
                      <children>

@@ -1,6 +1,7 @@
 package mockup.controller;
 
 import dev.rapid.util.Constants;
+import dev.rapid.util.FXMLConstants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -30,7 +31,7 @@ public class HopDongListController extends AbstractListController {
 	public void search() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/hop_dong_tableview.fxml"));
+			loader.setLocation(Mockup.class.getResource(FXMLConstants.HD_TABLEVIEW));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			HopDongTableViewController controller = loader.getController();
@@ -64,7 +65,7 @@ public class HopDongListController extends AbstractListController {
 //			app.mainLayout.setCenter(contentArea);
 
 			FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Mockup.class.getResource(Constants.CHI_TIET_HOPDONG_FILE_PATH));
+            loader.setLocation(Mockup.class.getResource(FXMLConstants.HD_DETAIL));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			// Create the dialog Stage.

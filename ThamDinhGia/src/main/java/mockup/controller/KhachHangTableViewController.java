@@ -2,6 +2,7 @@ package mockup.controller;
 
 import java.io.IOException;
 
+import dev.rapid.util.FXMLConstants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -105,7 +106,7 @@ public class KhachHangTableViewController {
 
                 	try {
                     	FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_khach_hang.fxml"));
+                        loader.setLocation(Mockup.class.getResource(FXMLConstants.KH_DETAIL));
             			AnchorPane page = (AnchorPane) loader.load();
 
             			// Create the dialog Stage.

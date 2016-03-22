@@ -2,6 +2,7 @@ package mockup.controller;
 
 import java.io.IOException;
 
+import dev.rapid.util.FXMLConstants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -118,7 +119,7 @@ public class BaoCaoTableViewController {
 
                 	try {
                     	FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_bao_cao.fxml"));
+                        loader.setLocation(Mockup.class.getResource(FXMLConstants.BC_DETAIL));
             			AnchorPane page = (AnchorPane) loader.load();
 
             			// Create the dialog Stage.

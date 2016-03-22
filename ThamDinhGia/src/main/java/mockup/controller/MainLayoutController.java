@@ -1,5 +1,6 @@
 package mockup.controller;
 
+import dev.rapid.util.FXMLConstants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -59,7 +60,7 @@ public class MainLayoutController extends AbstractListController{
 		try {
 			System.out.println("Clicked: " + (countClick++));
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(MainLayoutController.class.getResource("/fxml/hop_dong_list.fxml"));
+			loaderContent.setLocation(MainLayoutController.class.getResource(FXMLConstants.HD_LIST));
 
 			contentArea = (AnchorPane) loaderContent.load();
 
@@ -97,7 +98,7 @@ public class MainLayoutController extends AbstractListController{
 	private void timKiemBaoCao() {
 		try {
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/bao_cao_list.fxml"));
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.BC_LIST));
 
 			contentArea = (AnchorPane) loaderContent.load();
 			BaoCaoListController controller = loaderContent.getController();
@@ -113,7 +114,7 @@ public class MainLayoutController extends AbstractListController{
 	private void taoMoiBaoCao() {
 		try {
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/chi_tiet_bao_cao.fxml"));
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.BC_DETAIL));
 
 			contentArea = (AnchorPane) loaderContent.load();
 
@@ -127,7 +128,7 @@ public class MainLayoutController extends AbstractListController{
 	private void timKiemMayMocThietBi() {
 		try {
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/may_moc_thiet_bi_list.fxml"));
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.MMTB_LIST));
 
 			contentArea = (AnchorPane) loaderContent.load();
 
@@ -141,7 +142,7 @@ public class MainLayoutController extends AbstractListController{
 	private void taoMoiMayMocThietBi() {
 		try {
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/chi_tiet_may_moc_thiet_bi.fxml"));
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.MMTB_DETAIL));
 
 			contentArea = (AnchorPane) loaderContent.load();
 
@@ -185,7 +186,7 @@ public class MainLayoutController extends AbstractListController{
 	private void timKiemKhachHang() {
 		try {
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/khach_hang_list.fxml"));
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.KH_LIST));
 
 			contentArea = (AnchorPane) loaderContent.load();
 
@@ -199,7 +200,7 @@ public class MainLayoutController extends AbstractListController{
 	private void taoMoiKhachHang() {
 		try {
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/chi_tiet_khach_hang.fxml"));
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.KH_DETAIL));
 
 			contentArea = (AnchorPane) loaderContent.load();
 

@@ -1,5 +1,6 @@
 package mockup.controller;
 
+import dev.rapid.util.FXMLConstants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.TableView;
@@ -13,7 +14,7 @@ public class MayMocThietBiListController {
 	public void search() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/may_moc_thiet_bi_tableview.fxml"));
+			loader.setLocation(Mockup.class.getResource(FXMLConstants.MMTB_TABLEVIEW));
 			AnchorPane page = (AnchorPane) loader.load();
 
 //			BaoCaoTableViewController controller = loader.getController();

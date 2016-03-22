@@ -3,6 +3,7 @@ package mockup.controller;
 import java.io.IOException;
 
 import dev.rapid.util.Constants;
+import dev.rapid.util.FXMLConstants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -208,7 +209,7 @@ public class ChiTietBaoCaoController extends AbstractController {
 
                 	try {
                     	FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_may_moc_thiet_bi.fxml"));
+                        loader.setLocation(Mockup.class.getResource(FXMLConstants.MMTB_DETAIL));
             			AnchorPane page = (AnchorPane) loader.load();
 
             			// Create the dialog Stage.

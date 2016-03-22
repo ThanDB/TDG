@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane minHeight="650.0" minWidth="800.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane minHeight="650.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label alignment="CENTER" layoutX="386.0" layoutY="14.0" text="Chi tiết phương tiện vận tải" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
          <font>
@@ -19,8 +18,8 @@
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="93.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="309.0" minWidth="10.0" prefWidth="273.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="97.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="215.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="10.0" prefWidth="127.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="192.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -30,21 +29,22 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Label text="Tên phương tiện" />
-            <Label text="Loại phương tiện" GridPane.rowIndex="1" />
-            <Label text="Biển số" GridPane.rowIndex="2" />
-            <Label text="Số khung" GridPane.rowIndex="3" />
-            <Label text="Số máy" GridPane.rowIndex="4" />
-            <Label text="Năm sản xuất" GridPane.rowIndex="5" />
-            <Label text="Nguyên giá" GridPane.columnIndex="2" />
-            <Label text="Số km đã đi" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label text="Hiện trạng" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label text="Giá trị TĐ" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Label text="Phương pháp TĐ" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Label text="Thời gian TĐ" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <Label text="Nước sản xuất" GridPane.rowIndex="6" />
+            <Label text="Tên tài sản" />
+            <Label text="Loại hình" GridPane.rowIndex="1" />
+            <Label text="Pháp lý" GridPane.rowIndex="2" />
+            <Label text="Loại phương tiện" GridPane.rowIndex="3" />
+            <Label text="Số khung" GridPane.rowIndex="4" />
+            <Label text="Số máy" GridPane.rowIndex="5" />
+            <Label text="Công suất/tải trọng" GridPane.columnIndex="2" />
+            <Label text="Trọng lượng (kg)" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Nguyên giá (đồng)" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Phương pháp thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Label text="Hiện trạng, mô tả chung" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="Giá trị thẩm định (đồng)" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Label text="Năm sản xuất" GridPane.rowIndex="6" />
             <TextField GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="20.0" />
@@ -70,8 +70,8 @@
                   <Insets right="20.0" />
                </GridPane.margin>
             </TextField>
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
@@ -79,13 +79,21 @@
             <TextField GridPane.columnIndex="3" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
             <TextField GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Label text="Nước sản xuất" GridPane.rowIndex="7" />
+            <Label text="Thời gian thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets right="20.0" />
+               </GridPane.margin>
+            </TextField>
+            <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="6" />
          </children>
       </GridPane>
-      <Label layoutX="50.0" layoutY="269.0" text="Thông tin khác" />
-      <TextArea layoutX="144.0" layoutY="269.0" prefHeight="145.0" prefWidth="610.0" AnchorPane.rightAnchor="50.0" />
+      <Label layoutX="50.0" layoutY="289.0" text="Thông tin khác" />
+      <TextArea layoutX="144.0" layoutY="291.0" prefHeight="123.0" prefWidth="610.0" AnchorPane.rightAnchor="50.0" />
       <Button layoutX="269.0" layoutY="442.0" minWidth="60.0" mnemonicParsing="false" text="Trở về" />
       <Button layoutX="374.0" layoutY="442.0" minWidth="60.0" mnemonicParsing="false" text="Sửa" />
       <Button layoutX="482.0" layoutY="442.0" minWidth="60.0" mnemonicParsing="false" text="Xóa" />

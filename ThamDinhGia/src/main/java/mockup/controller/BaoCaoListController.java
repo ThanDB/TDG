@@ -1,5 +1,6 @@
 package mockup.controller;
 
+import dev.rapid.util.FXMLConstants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.ComboBox;
@@ -16,7 +17,7 @@ public class BaoCaoListController {
 	public void search() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/bao_cao_tableview.fxml"));
+			loader.setLocation(Mockup.class.getResource(FXMLConstants.BC_TABLEVIEW));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			BaoCaoTableViewController controller = loader.getController();

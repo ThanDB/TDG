@@ -2,13 +2,12 @@ package mockup.controller;
 
 import java.io.IOException;
 
+import dev.rapid.util.FXMLConstants;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 public class Mockup extends Application {
@@ -37,7 +36,7 @@ public class Mockup extends Application {
 		try {
 			// Load main layout from fxml file.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/dang_nhap.fxml"));
+			loader.setLocation(Mockup.class.getResource(FXMLConstants.LOGIN));
 			loginBox = (AnchorPane) loader.load();
 
 			// Show the scene containing the main layout.
@@ -59,7 +58,7 @@ public class Mockup extends Application {
 		try {
 			// Load main layout from fxml file.
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/main_layout_copy.fxml"));
+			loader.setLocation(Mockup.class.getResource(FXMLConstants.MAIN_LAYOUT));
 			mainLayout = (BorderPane) loader.load();
 
 			MainLayoutController controller = loader.getController();
@@ -67,7 +66,7 @@ public class Mockup extends Application {
 			controller.setWelcomeLbl("Xin chào: Nguyễn Văn B");
 
 			FXMLLoader loaderContent = new FXMLLoader();
-			loaderContent.setLocation(Mockup.class.getResource("/fxml/hop_dong_list.fxml"));
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.HD_LIST));
 			AnchorPane content = (AnchorPane) loaderContent.load();
 
 			HopDongListController hopDongController = loaderContent.getController();

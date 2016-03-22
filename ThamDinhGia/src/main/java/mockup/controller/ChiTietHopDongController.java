@@ -3,6 +3,7 @@ package mockup.controller;
 import java.io.IOException;
 
 import dev.rapid.util.Constants;
+import dev.rapid.util.FXMLConstants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -147,7 +148,7 @@ public class ChiTietHopDongController extends AbstractController{
 	private void taoMoiKhachHang() {
 		try {
         	FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_khach_hang.fxml"));
+            loader.setLocation(Mockup.class.getResource(FXMLConstants.KH_DETAIL));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			// Create the dialog Stage.
@@ -184,7 +185,7 @@ public class ChiTietHopDongController extends AbstractController{
 	private void timKiemKhachHang() {
         try {
         	FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Mockup.class.getResource("/fxml/khach_hang_list.fxml"));
+            loader.setLocation(Mockup.class.getResource(FXMLConstants.KH_LIST));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			// Create the dialog Stage.
@@ -210,7 +211,7 @@ public class ChiTietHopDongController extends AbstractController{
 	private void suaKhachHang() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-	        loader.setLocation(Mockup.class.getResource("/fxml/chi_tiet_khach_hang.fxml"));
+	        loader.setLocation(Mockup.class.getResource(FXMLConstants.KH_DETAIL));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			// Create the dialog Stage.
@@ -328,7 +329,7 @@ public class ChiTietHopDongController extends AbstractController{
 
                 	try {
                     	FXMLLoader loader = new FXMLLoader();
-                        loader.setLocation(Mockup.class.getResource(Constants.CHI_TIET_BAOCAO_FILE_PATH));
+                        loader.setLocation(Mockup.class.getResource(FXMLConstants.BC_DETAIL));
             			AnchorPane page = (AnchorPane) loader.load();
 
             			// Create the dialog Stage.

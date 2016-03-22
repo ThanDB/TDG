@@ -1,5 +1,6 @@
 package mockup.controller;
 
+import dev.rapid.util.FXMLConstants;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -18,7 +19,7 @@ public class KhachHangListController {
 	private void search() {
 		try {
 			FXMLLoader loader = new FXMLLoader();
-			loader.setLocation(Mockup.class.getResource("/fxml/khach_hang_tableview.fxml"));
+			loader.setLocation(Mockup.class.getResource(FXMLConstants.KH_TABLEVIEW));
 			AnchorPane page = (AnchorPane) loader.load();
 
 			KhachHangTableViewController controller = loader.getController();

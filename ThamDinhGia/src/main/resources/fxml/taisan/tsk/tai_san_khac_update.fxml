@@ -76,8 +76,7 @@
       </GridPane>
       <Label layoutX="50.0" layoutY="247.0" text="Ghi chú" />
       <TextArea layoutX="109.0" layoutY="256.0" prefHeight="114.0" prefWidth="644.0" />
-      <Button layoutX="274.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Trở về" />
-      <Button layoutX="360.0" layoutY="410.0" mnemonicParsing="false" text="Cập nhật" />
-      <Button layoutX="445.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Xóa" />
+      <Button layoutX="348.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Trở về" />
+      <Button layoutX="431.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Sửa" />
    </children>
 </AnchorPane>

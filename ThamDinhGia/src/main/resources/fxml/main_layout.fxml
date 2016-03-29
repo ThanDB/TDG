@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<BorderPane minHeight="710.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <Accordion maxHeight="-Infinity" prefWidth="175.0" BorderPane.alignment="TOP_LEFT">
+        <panes>
+          <TitledPane animated="false" prefHeight="13.0" prefWidth="202.0" text="Hợp đồng" />
+          <TitledPane animated="false" maxHeight="-Infinity" prefHeight="0.0" prefWidth="202.0" text="Chứng thư">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" maxHeight="-Infinity" prefWidth="202.0" text="Tài sản">
+            <content>
+              <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="124.0" prefWidth="200.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" layoutX="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Máy móc thiết bị" />
+                        <Button alignment="BASELINE_LEFT" layoutX="25.0" layoutY="25.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Phương tiện vận tải" />
+                        <Button alignment="BASELINE_LEFT" layoutX="26.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="175.0" text="Giá trị doanh nghiệp" />
+                        <Button alignment="BASELINE_LEFT" layoutX="26.0" layoutY="75.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Bất động sản - Dự án" />
+                        <Button alignment="BASELINE_LEFT" layoutX="26.0" layoutY="100.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="174.0" text="Tài sản khác" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </TitledPane>
+            <TitledPane animated="false" maxHeight="-Infinity" prefHeight="0.0" prefWidth="202.0" text="Import">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" maxHeight="-Infinity" prefHeight="0.0" prefWidth="202.0" text="Khách hàng">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" maxHeight="-Infinity" prefHeight="33.0" prefWidth="202.0" text="Nhân viên">
+              <content>
+                <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="0.0" prefWidth="202.0" text="Thông tin cá nhân">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+        </panes>
+      </Accordion>
+   </left>
+   <top>
+      <AnchorPane prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Xin chào: Nguyễn Văn A" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="4.0" />
+            <Button mnemonicParsing="false" text="Thoát" AnchorPane.rightAnchor="20.0" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

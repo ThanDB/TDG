@@ -1,5 +1,6 @@
 package mockup.controller;
 
+import dev.rapid.controller.tsk.TaiSanKhacListController;
 import dev.rapid.util.FXMLConstants;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,42 +8,6 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 
 public class MainLayoutController extends AbstractListController{
-//	@FXML
-//	private Button timKiemHopDong;
-//
-//	@FXML
-//	private Button taoMoiHopDong;
-//
-//	@FXML
-//	private Button timKiemBaoCao;
-//
-//	@FXML
-//	private Button taoMoiBaoCao;
-//
-//	@FXML
-//	private Button timKiemMayMocThietBi;
-//
-//	@FXML
-//	private Button taoMoiMayMocThietBi;
-//
-//	@FXML
-//	private Button timKiemBatDongSan;
-//
-//	@FXML
-//	private Button taoMoiBatDongSan;
-//
-//	@FXML
-//	private Button timKiemGiaTriDoanhNghiep;
-//
-//	@FXML
-//	private Button taoMoiGiaTriDoanhNghiep;
-//
-//	@FXML
-//	private Button timKiemPhuongTienVanTai;
-//
-//	@FXML
-//	private Button taoMoiPhuongTienVanTai;
-
 	@FXML
 	private Label welcomeLbl;
 
@@ -121,6 +86,40 @@ public class MainLayoutController extends AbstractListController{
 			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			// TODO: handle exception
+		}
+	}
+
+	@FXML
+	private void mayMocThietBi() {
+
+	}
+	@FXML
+	private void batDongSan() {
+
+	}
+	@FXML
+	private void giaTriDoanhNghiep() {
+
+	}
+	@FXML
+	private void phuongTienVanTai() {
+
+	}
+	@FXML
+	private void taiSanKhac() {
+		try {
+			FXMLLoader loaderContent = new FXMLLoader();
+			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.TSK_LIST));
+
+			contentArea = (AnchorPane) loaderContent.load();
+
+			TaiSanKhacListController controller = loaderContent.getController();
+
+			controller.setApp(app);
+			controller.setKhachHangData(controller.getTaiSanData());
+			app.mainLayout.setCenter(contentArea);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
 

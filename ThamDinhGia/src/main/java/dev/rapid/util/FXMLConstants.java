@@ -49,7 +49,9 @@ public final class FXMLConstants {
 	public static final String PTVT_TABLEVIEW = "/fxml/taisan/ptvt/phuong_tien_van_tai_tableview.fxml";
 
 	public static final String TSK_DETAIL = "/fxml/taisan/tsk/chi_tiet_tai_san_khac.fxml";
+	public static final String TSK_NEW = "/fxml/taisan/tsk/tai_san_khac_new.fxml";
 	public static final String TSK_LIST = "/fxml/taisan/tsk/tai_san_khac_list.fxml";
+	public static final String TSK_SEARCH = "/fxml/taisan/tsk/tai_san_khac_search.fxml";
 	public static final String TSK_TABLEVIEW = "/fxml/taisan/tsk/tai_san_khac_tableview.fxml";
 
 	public static final String USERINFO = "/fxml/userinfo/user_info.fxml";

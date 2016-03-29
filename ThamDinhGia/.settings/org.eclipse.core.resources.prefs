@@ -1,5 +1,7 @@
 eclipse.preferences.version=1
 encoding//src/main/java/dev/rapid/controller/App.java=UTF-8
+encoding//src/main/java/dev/rapid/controller/tsk/TaiSanKhacListController.java=UTF-8
+encoding//src/main/java/dev/rapid/controller/tsk/TaiSanKhacNewController.java=UTF-8
 encoding//src/main/java/dev/rapid/dao/impl/KhachHangDaoImpl.java=UTF-8
 encoding//src/main/java/dev/rapid/util/Constants.java=UTF-8
 encoding//src/main/java/mockup/controller/BaoCaoListController.java=UTF-8

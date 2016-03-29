@@ -27,7 +27,7 @@
         </columns>
       </TableView>
       <Pagination layoutX="-60.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
-      <Button layoutX="323.0" layoutY="523.0" mnemonicParsing="false" onAction="#search" text="Tìm kiếm" />
-      <Button layoutX="432.0" layoutY="523.0" mnemonicParsing="false" onAction="#create" text="Tạo mới" />
+      <Button fx:id="search" layoutX="323.0" layoutY="523.0" mnemonicParsing="false" text="Tìm kiếm" />
+      <Button fx:id="create" layoutX="432.0" layoutY="523.0" mnemonicParsing="false" text="Tạo mới" />
    </children>
 </AnchorPane>

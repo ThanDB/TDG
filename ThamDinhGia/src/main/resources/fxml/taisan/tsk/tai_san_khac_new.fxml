@@ -69,7 +69,7 @@
       </GridPane>
       <Label layoutX="50.0" layoutY="247.0" text="Ghi chú" />
       <TextArea fx:id="ghiChuTA" layoutX="125.0" layoutY="207.0" prefHeight="114.0" prefWidth="625.0" />
-      <Button layoutX="340.0" layoutY="348.0" mnemonicParsing="false" onAction="#createNew" text="Tạo mới" />
-      <Button layoutX="438.0" layoutY="348.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="60.0" text="Hủy" />
+      <Button layoutX="327.0" layoutY="348.0" mnemonicParsing="false" onAction="#createNew" prefHeight="25.0" prefWidth="73.0" text="Tạo mới" />
+      <Button layoutX="438.0" layoutY="348.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="67.0" text="Hủy" />
    </children>
 </AnchorPane>

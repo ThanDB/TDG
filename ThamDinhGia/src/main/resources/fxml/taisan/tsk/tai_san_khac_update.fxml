@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="650.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane minHeight="650.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.rapid.controller.tsk.TaiSanKhacUpdateController">
    <children>
       <Label alignment="CENTER" layoutX="161.0" layoutY="25.0" text="Chi tiết tài sản khác" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
          <font>
@@ -27,7 +27,6 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="Tên tài sản" />
@@ -35,48 +34,42 @@
             <Label text="Loại tài sản" GridPane.rowIndex="2" />
             <Label text="Pháp lý" GridPane.rowIndex="3" />
             <Label text="Nơi sản xuất" GridPane.rowIndex="4" />
-            <Label text="Năm sản xuất" GridPane.rowIndex="5" />
-            <Label text="Nguyên giá" GridPane.columnIndex="2" />
-            <Label text="Hiện trạng, mô tả chung" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Label text="Phương pháp thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Label text="Giá trị thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Label text="Thời gian thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <TextField GridPane.columnIndex="1">
+            <Label text="Năm sản xuất" GridPane.columnIndex="2" />
+            <Label text="Nguyên giá" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Label text="Hiện trạng, mô tả chung" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Label text="Phương pháp thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Label text="Giá trị thẩm định" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField fx:id="tenTaiSanTxt" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
             </TextField>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="loaiTaiSanTxt" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
             </TextField>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <TextField fx:id="phapLyTxt" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
             </TextField>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <TextField fx:id="noiSanXuatTxt" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets right="20.0" />
                </GridPane.margin>
             </TextField>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets right="20.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField GridPane.columnIndex="3" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <DatePicker GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <ComboBox prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="nguyenGiaTxt" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="hienTrangTxt" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <TextField fx:id="giaTriTDTxt" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <DatePicker fx:id="namSanXuatDp" GridPane.columnIndex="3" />
+            <ComboBox fx:id="phuongPhapTDCbb" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <ComboBox fx:id="loaiHinhCbb" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
-      <Label layoutX="50.0" layoutY="247.0" text="Ghi chú" />
-      <TextArea layoutX="109.0" layoutY="256.0" prefHeight="114.0" prefWidth="644.0" />
-      <Button layoutX="348.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Trở về" />
-      <Button layoutX="431.0" layoutY="410.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Sửa" />
+      <Label layoutX="50.0" layoutY="220.0" text="Ghi chú" />
+      <TextArea fx:id="ghiChuTA" layoutX="129.0" layoutY="220.0" prefHeight="114.0" prefWidth="624.0" />
+      <Button layoutX="327.0" layoutY="362.0" mnemonicParsing="false" onAction="#close" prefHeight="25.0" prefWidth="73.0" text="Trở về" />
+      <Button fx:id="editBtn" layoutX="433.0" layoutY="362.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="73.0" text="Sửa" />
    </children>
 </AnchorPane>

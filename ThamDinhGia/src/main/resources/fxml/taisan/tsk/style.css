@@ -1,0 +1,19 @@
+/*
+Pseudo class 'tham-dinh' will change the row background
+ color to green when activated
+
+.table-row-cell:tham-dinh
+{
+    -fx-background-color: #007054;
+    -fx-font-style: italic;
+}
+*/
+
+/*
+Pseudo class 'so-sanh' will change the row background
+color to red when activated
+*/
+.table-row-cell:so-sanh {
+	-fx-background-color: #007054;
+    /* -fx-font-style: italic; */
+}

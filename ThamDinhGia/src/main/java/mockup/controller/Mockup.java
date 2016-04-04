@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 public class Mockup extends Application {
 
 	public Stage primaryStage;
-	public static BorderPane mainLayout;
+	public BorderPane mainLayout;
 
 	private static AnchorPane loginBox;
 

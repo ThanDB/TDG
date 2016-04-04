@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
@@ -7,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="650.0" minWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.rapid.controller.tsk.TaiSanKhacListController">
+<AnchorPane minHeight="650.0" minWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.rapid.controller.tsk.TaiSanKhacListController">
    <children>
       <Label alignment="CENTER" layoutX="137.0" layoutY="14.0" text="Danh sách tài sản khác" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
          <font>
@@ -23,7 +24,7 @@
             <TableColumn fx:id="namSanXuatTc" prefWidth="91.0" text="Năm sản xuất" />
             <TableColumn fx:id="nguyenGiaTc" prefWidth="93.0" text="Nguyên giá" />
             <TableColumn fx:id="giaTriTDTc" minWidth="0.0" prefWidth="95.0" text="Giá trị TĐ" />
-            <TableColumn fx:id="actionTc" maxWidth="54.0" prefWidth="54.0" />
+            <TableColumn fx:id="actionTc" maxWidth="-1.0" minWidth="95.0" prefWidth="-1.0" />
         </columns>
       </TableView>
       <Pagination layoutX="-60.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />

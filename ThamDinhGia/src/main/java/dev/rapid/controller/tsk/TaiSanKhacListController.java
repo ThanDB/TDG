@@ -3,9 +3,12 @@ package dev.rapid.controller.tsk;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.ZoneId;
+import java.util.Date;
 
 import dev.rapid.model.tsk.TaiSanKhacDTO;
 import dev.rapid.model.tsk.TaiSanKhacDataTable;
+import dev.rapid.util.DateFormatUtil;
 import dev.rapid.util.FXMLConstants;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.value.ObservableValue;
@@ -195,8 +198,8 @@ public class TaiSanKhacListController {
 						tskDTO.setHienTrang("Không bị hư hại gì");
 						tskDTO.setLoaiHinh(curRecord.getLoaiHinh().getValue().toString());
 						tskDTO.setLoaiTaisan(curRecord.getLoaiTaiSan().getValue().toString());
-						LocalDate namSanXuat = LocalDate
-								.of(Integer.valueOf(curRecord.getNamSanXuat().getValue().toString()), Month.JANUARY, 1);
+
+						LocalDate namSanXuat = DateFormatUtil.stringToLocalDate(curRecord.getNamSanXuat().getValue());
 						tskDTO.setNamSanXuat(namSanXuat);
 						tskDTO.setNguyenGia(curRecord.getNguyenGia().getValue().toString());
 						tskDTO.setNoiSanXuat(curRecord.getNoiSanXuat().getValue().toString());

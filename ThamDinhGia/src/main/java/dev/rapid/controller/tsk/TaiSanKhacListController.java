@@ -2,9 +2,6 @@ package dev.rapid.controller.tsk;
 
 import java.io.IOException;
 import java.time.LocalDate;
-import java.time.Month;
-import java.time.ZoneId;
-import java.util.Date;
 
 import dev.rapid.model.tsk.TaiSanKhacDTO;
 import dev.rapid.model.tsk.TaiSanKhacDataTable;
@@ -123,6 +120,10 @@ public class TaiSanKhacListController {
 
 			AnchorPane contentArea = (AnchorPane) loaderContent.load();
 
+			TaiSanKhacNewController controller = loaderContent.getController();
+			controller.initData();
+			controller.setApp(app);
+
 			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -135,7 +136,7 @@ public class TaiSanKhacListController {
 		this.app = app;
 	}
 
-	public void setKhachHangData(ObservableList<TaiSanKhacDataTable> taiSanKhacData) {
+	public void setTaiSanData(ObservableList<TaiSanKhacDataTable> taiSanKhacData) {
 		this.taiSanKhacData = taiSanKhacData;
 		taiSanKhacTv.setItems(this.taiSanKhacData);
 	}
@@ -210,19 +211,6 @@ public class TaiSanKhacListController {
 
 						controller.fillData();
 
-						// controller.setTitle("Thông tin khách hàng");
-						// controller.setUpdateButtonTitle("Cập nhật");
-						// controller.setDialogStage(dialogStage);
-						// controller.setKhachHang(new
-						// KhachHangDTO(curRecord.getTenKhachHang().getValue().toString(),
-						// curRecord.getDiaChi().getValue().toString(),
-						// curRecord.getDienThoai().getValue().toString(),
-						// curRecord.getFax().getValue().toString(),
-						// curRecord.getDaiDien().getValue().toString(),
-						// curRecord.getMaSoThue().getValue().toString()));
-						// controller.fillData();
-						// controller.setKhachHangTableViewController(KhachHangTableViewController.this);
-
 						dialogStage.showAndWait();
 
 						if (!controller.getViewStatus()) {
@@ -241,17 +229,7 @@ public class TaiSanKhacListController {
 							taiSanKhacTv.getColumns().get(0).setVisible(true);
 						}
 
-						// if(khachHang != null) {
-						// curRecord.setTenKhachHang(khachHang.getTenKhachHang());
-						// curRecord.setDiaChi(khachHang.getDiaChi());
-						// curRecord.setDienThoai(khachHang.getDienThoai());
-						// curRecord.setFax(khachHang.getFax());
-						// curRecord.setDaiDien(khachHang.getDaiDien());
-						// curRecord.setMaSoThue(khachHang.getMaSoThue());
-						// }
-
 					} catch (IOException e) {
-						// TODO Auto-generated catch block
 						e.printStackTrace();
 					}
 				}

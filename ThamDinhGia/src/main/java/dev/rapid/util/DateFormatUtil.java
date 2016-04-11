@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 public class DateFormatUtil {
-	static List<String> dateForms = Arrays.asList(new String[] {"d/M/yyyy", "d-M-yyyy", "M/yyyy", "M-yyyy", "yyyy"});
+	static List<String> dateForms = Arrays.asList(new String[] { "d/M/yyyy", "d-M-yyyy", "M/yyyy", "M-yyyy", "yyyy" });
 
 	public static String dateToString(Date date) {
 		String result = "";
@@ -23,7 +23,7 @@ public class DateFormatUtil {
 		Date result = null;
 
 		SimpleDateFormat format;
-		for(String form: dateForms) {
+		for (String form : dateForms) {
 			format = new SimpleDateFormat(form);
 			try {
 				result = format.parse(dateString);
@@ -37,10 +37,22 @@ public class DateFormatUtil {
 	}
 
 	public static LocalDate stringToLocalDate(String dateString) {
-		if(StringUtil.isNullOrEmpty(dateString)){
+		if (StringUtil.isNullOrEmpty(dateString)) {
 			return null;
 		}
 
 		return stringToDate(dateString).toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+	}
+
+	public static String localDateToString(LocalDate localDate) {
+		if (null == localDate) {
+			return null;
+		}
+
+		String result = "";
+		Date date = Date.from(localDate.atStartOfDay(ZoneId.systemDefault()).toInstant());
+		result = dateToString(date);
+
+		return result;
 	}
 }

@@ -116,7 +116,7 @@ public class MainLayoutController extends AbstractListController{
 			TaiSanKhacListController controller = loaderContent.getController();
 
 			controller.setApp(app);
-			controller.setKhachHangData(controller.getTaiSanData());
+			controller.setTaiSanData(controller.getTaiSanData());
 			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -105,7 +105,8 @@ public class TaiSanKhacListController {
 			loaderContent.setLocation(Mockup.class.getResource(FXMLConstants.TSK_SEARCH));
 
 			AnchorPane contentArea = (AnchorPane) loaderContent.load();
-
+			TaiSanKhacSearchController controller = loaderContent.getController();
+			controller.setApp(app);
 			app.mainLayout.setCenter(contentArea);
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -9,6 +9,7 @@ import java.util.List;
 
 public class DateFormatUtil {
 	static List<String> dateForms = Arrays.asList(new String[] { "d/M/yyyy", "d-M-yyyy", "M/yyyy", "M-yyyy", "yyyy" });
+	//static List<String> dateForms = Arrays.asList(new String[] { "yyyy" });
 
 	public static String dateToString(Date date) {
 		String result = "";
@@ -29,7 +30,7 @@ public class DateFormatUtil {
 				result = format.parse(dateString);
 				break;
 			} catch (Exception e) {
-				e.printStackTrace();
+				System.out.println(e.getMessage());
 			}
 		}
 

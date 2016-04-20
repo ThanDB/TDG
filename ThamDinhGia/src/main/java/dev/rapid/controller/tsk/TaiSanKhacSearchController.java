@@ -99,7 +99,7 @@ public class TaiSanKhacSearchController {
     private void search() {
     	String tenTaiSan = tenTaiSanTxt.getText();
     	String loaiHinh = loaiHinhCbb.getValue();
-    	/*String loaiTaiSan = loaiTaiSanTxt.getText();
+    	String loaiTaiSan = loaiTaiSanTxt.getText();
     	String noiSanXuat = noiSanXuatTxt.getText();
     	LocalDate namSanXuatFrom = namSanXuatFromDp.getValue();
     	LocalDate namSanXuatTo = namSanXuatToDp.getValue();
@@ -107,7 +107,7 @@ public class TaiSanKhacSearchController {
     	String phuongPhap = phuongPhapTDCbb.getValue();
     	String giaTriTDFrom = giaTriTDFromTxt.getText();
     	String giaTriTDTo = giaTriTDToTxt.getText();
-    	LocalDate thoiGianTDFrom = thoiGianTDFromDp.getValue();
+    	/*LocalDate thoiGianTDFrom = thoiGianTDFromDp.getValue();
     	LocalDate thoiGianTDTo = thoiGianTDToDp.getValue();*/
 
     	List<TaiSanKhacDTO> resultList = taiSanKhacList;
@@ -119,8 +119,44 @@ public class TaiSanKhacSearchController {
     		resultList = FunctionUtil.filter(resultList, t -> t.getLoaiHinh().contains(loaiHinh));
     	}
 
-    	/*if(StringUtil.isNullOrEmpty(tenTaiSan)) {
-    		FunctionUtil.filter(resultList, t -> t.getTenTaiSan().contains(tenTaiSan));
+    	if(!StringUtil.isNullOrEmpty(loaiTaiSan)) {
+    		resultList = FunctionUtil.filter(resultList, t -> t.getLoaiTaisan().contains(loaiTaiSan));
+    	}
+
+    	if(!StringUtil.isNullOrEmpty(noiSanXuat)) {
+    		resultList = FunctionUtil.filter(resultList, t -> t.getNoiSanXuat().contains(noiSanXuat));
+    	}
+
+    	if(!StringUtil.isNullOrEmpty(nguyenGia)) {
+    		resultList = FunctionUtil.filter(resultList, t -> t.getNguyenGia().contains(nguyenGia));
+    	}
+
+    	if(!StringUtil.isNullOrEmpty(phuongPhap)) {
+    		resultList = FunctionUtil.filter(resultList, t -> t.getPhuongPhap().contains(phuongPhap));
+    	}
+
+    	if(!StringUtil.isNullOrEmpty(giaTriTDFrom)) {
+    		resultList = FunctionUtil.filter(resultList, t -> (giaTriTDFrom.compareTo(t.getGiaTriTD()) <= 0));
+    	}
+
+    	if(!StringUtil.isNullOrEmpty(giaTriTDTo)) {
+    		resultList = FunctionUtil.filter(resultList, t -> (giaTriTDTo.compareTo(t.getGiaTriTD()) >= 0));
+    	}
+
+    	if(null!=namSanXuatFrom) {
+    		resultList = FunctionUtil.filter(resultList, t -> namSanXuatFrom.isBefore(t.getNamSanXuat()));
+    	}
+
+    	if(null!=namSanXuatTo) {
+    		resultList = FunctionUtil.filter(resultList, t -> namSanXuatTo.isAfter(t.getNamSanXuat()));
+    	}
+
+    	/*if(null!=thoiGianTDFrom) {
+    		resultList = FunctionUtil.filter(resultList, t -> thoiGianTDFrom.isBefore(t.get));
+    	}
+
+    	if(null!=thoiGianTDTo) {
+    		resultList = FunctionUtil.filter(resultList, t -> thoiGianTDTo.isAfter(t.getNamSanXuat()));
     	}*/
 
     	ObservableList<TaiSanKhacDataTable> taiSanKhacDataTableList = FXCollections.observableArrayList();

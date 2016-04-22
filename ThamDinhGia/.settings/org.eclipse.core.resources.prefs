@@ -1,5 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/main/java/dev/rapid/controller/App.java=UTF-8
+encoding//src/main/java/dev/rapid/controller/gtdn/GiaTriDNListController.java=UTF-8
+encoding//src/main/java/dev/rapid/controller/gtdn/GiaTriDNNewController.java=UTF-8
+encoding//src/main/java/dev/rapid/controller/gtdn/GiaTriDNSearchController.java=UTF-8
+encoding//src/main/java/dev/rapid/controller/gtdn/GiaTriDNUpdateController.java=UTF-8
 encoding//src/main/java/dev/rapid/controller/tsk/TaiSanKhacListController.java=UTF-8
 encoding//src/main/java/dev/rapid/controller/tsk/TaiSanKhacNewController.java=UTF-8
 encoding//src/main/java/dev/rapid/controller/tsk/TaiSanKhacSearchController.java=UTF-8

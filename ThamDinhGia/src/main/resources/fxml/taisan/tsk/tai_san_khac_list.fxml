@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="650.0" minWidth="800.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.rapid.controller.tsk.TaiSanKhacListController">
+<AnchorPane minHeight="650.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.rapid.controller.tsk.TaiSanKhacListController">
    <children>
       <Label alignment="CENTER" layoutX="137.0" layoutY="14.0" text="Danh sách tài sản khác" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
          <font>
@@ -17,18 +17,18 @@
       </Label>
       <TableView fx:id="taiSanKhacTv" layoutX="50.0" layoutY="281.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
         <columns>
-          <TableColumn fx:id="tenTaiSanTc" prefWidth="113.0" text="Tên tài sản" />
-          <TableColumn fx:id="loaiHinhTc" prefWidth="91.0" text="Loại hình" />
-            <TableColumn fx:id="loaiTaiSanTc" prefWidth="95.0" text="Loại tài sản" />
-            <TableColumn fx:id="noiSanXuatTc" prefWidth="127.0" text="Nơi sản xuất" />
-            <TableColumn fx:id="namSanXuatTc" prefWidth="91.0" text="Năm sản xuất" />
-            <TableColumn fx:id="nguyenGiaTc" prefWidth="93.0" text="Nguyên giá" />
-            <TableColumn fx:id="giaTriTDTc" minWidth="0.0" prefWidth="95.0" text="Giá trị TĐ" />
-            <TableColumn fx:id="actionTc" maxWidth="-1.0" minWidth="95.0" prefWidth="-1.0" />
+          <TableColumn fx:id="tenTaiSanTc" prefWidth="142.0" text="Tên tài sản" />
+          <TableColumn fx:id="loaiHinhTc" prefWidth="98.0" text="Loại hình" />
+            <TableColumn fx:id="loaiTaiSanTc" prefWidth="117.0" text="Loại tài sản" />
+            <TableColumn fx:id="noiSanXuatTc" prefWidth="149.0" text="Nơi sản xuất" />
+            <TableColumn fx:id="namSanXuatTc" prefWidth="117.0" text="Năm sản xuất" />
+            <TableColumn fx:id="nguyenGiaTc" prefWidth="126.0" text="Nguyên giá" />
+            <TableColumn fx:id="giaTriTDTc" minWidth="0.0" prefWidth="142.0" text="Giá trị TĐ" />
+            <TableColumn fx:id="actionTc" maxWidth="254.0" minWidth="61.0" prefWidth="68.0" />
         </columns>
       </TableView>
       <Pagination layoutX="-60.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
-      <Button layoutX="323.0" layoutY="523.0" mnemonicParsing="false" onAction="#search" text="Tìm kiếm" />
-      <Button layoutX="432.0" layoutY="523.0" mnemonicParsing="false" onAction="#create" text="Tạo mới" />
+      <Button layoutX="425.0" layoutY="523.0" mnemonicParsing="false" onAction="#search" text="Tìm kiếm" />
+      <Button layoutX="540.0" layoutY="523.0" mnemonicParsing="false" onAction="#create" text="Tạo mới" />
    </children>
 </AnchorPane>

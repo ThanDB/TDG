@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="650.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.rapid.controller.gtdn.GiaTriDNListController">
+   <children>
+      <Label alignment="CENTER" layoutX="137.0" layoutY="14.0" text="Danh sách giá trị doanh nghiệp" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tableView" layoutX="50.0" layoutY="281.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="50.0">
+        <columns>
+          <TableColumn fx:id="tenDoanhNghiepTc" prefWidth="113.0" text="Tên doanh nghiệp" />
+          <TableColumn fx:id="loaiHinhTc" prefWidth="91.0" text="Loại hình" />
+            <TableColumn fx:id="loaiHinhKDTc" prefWidth="165.0" text="Loại hình kinh doanh" />
+            <TableColumn fx:id="namThanhLapTc" prefWidth="104.0" text="Năm thành lập" />
+            <TableColumn fx:id="vonDieuLeTc" prefWidth="86.0" text="Vốn điều lệ" />
+            <TableColumn fx:id="vonChuSoHuuTc" prefWidth="125.0" text="Vốn chủ sở hữu" />
+            <TableColumn fx:id="giaTriTSTc" minWidth="0.0" prefWidth="89.0" text="Giá trị tài sản" />
+            <TableColumn fx:id="giaTriTDTc" maxWidth="251.0" minWidth="66.0" prefWidth="112.0" text="Giá trị thẩm định" />
+            <TableColumn fx:id="actionTc" maxWidth="251.0" minWidth="66.0" prefWidth="112.0" />
+        </columns>
+      </TableView>
+      <Pagination layoutX="-60.0" layoutY="265.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" />
+      <Button layoutX="418.0" layoutY="523.0" mnemonicParsing="false" onAction="#search" text="Tìm kiếm" />
+      <Button layoutX="526.0" layoutY="523.0" mnemonicParsing="false" onAction="#create" text="Tạo mới" />
+   </children>
+</AnchorPane>
